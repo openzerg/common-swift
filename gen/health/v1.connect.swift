@@ -9,28 +9,36 @@ import Connect
 import Foundation
 import SwiftProtobuf
 
-internal protocol Health_V1_HealthServiceClientInterface: Sendable {
+public protocol Health_V1_HealthServiceClientInterface: Sendable {
+
+    @discardableResult
+    func `check`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Health_V1_CheckResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `check`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers) async -> ResponseMessage<Health_V1_CheckResponse>
 }
 
 /// Concrete implementation of `Health_V1_HealthServiceClientInterface`.
-internal final class Health_V1_HealthServiceClient: Health_V1_HealthServiceClientInterface, Sendable {
+public final class Health_V1_HealthServiceClient: Health_V1_HealthServiceClientInterface, Sendable {
     private let client: Connect.ProtocolClientInterface
 
-    internal init(client: Connect.ProtocolClientInterface) {
+    public init(client: Connect.ProtocolClientInterface) {
         self.client = client
     }
 
+    @discardableResult
+    public func `check`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Health_V1_CheckResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/health.v1.HealthService/Check", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `check`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Health_V1_CheckResponse> {
+    public func `check`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Health_V1_CheckResponse> {
         return await self.client.unary(path: "/health.v1.HealthService/Check", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
-    internal enum Metadata {
-        internal enum Methods {
-            internal static let check = Connect.MethodSpec(name: "Check", service: "health.v1.HealthService", type: .unary)
+    public enum Metadata {
+        public enum Methods {
+            public static let check = Connect.MethodSpec(name: "Check", service: "health.v1.HealthService", type: .unary)
         }
     }
 }

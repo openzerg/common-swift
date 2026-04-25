@@ -9,37 +9,53 @@ import Connect
 import Foundation
 import SwiftProtobuf
 
-internal protocol Tools_V1_ToolServiceClientInterface: Sendable {
+public protocol Tools_V1_ToolServiceClientInterface: Sendable {
+
+    @discardableResult
+    func `listTools`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Tools_V1_ListToolsResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `listTools`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers) async -> ResponseMessage<Tools_V1_ListToolsResponse>
+
+    @discardableResult
+    func `executeTool`(request: Tools_V1_ExecuteToolRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Tools_V1_ExecuteToolResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `executeTool`(request: Tools_V1_ExecuteToolRequest, headers: Connect.Headers) async -> ResponseMessage<Tools_V1_ExecuteToolResponse>
 }
 
 /// Concrete implementation of `Tools_V1_ToolServiceClientInterface`.
-internal final class Tools_V1_ToolServiceClient: Tools_V1_ToolServiceClientInterface, Sendable {
+public final class Tools_V1_ToolServiceClient: Tools_V1_ToolServiceClientInterface, Sendable {
     private let client: Connect.ProtocolClientInterface
 
-    internal init(client: Connect.ProtocolClientInterface) {
+    public init(client: Connect.ProtocolClientInterface) {
         self.client = client
     }
 
+    @discardableResult
+    public func `listTools`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Tools_V1_ListToolsResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/tools.v1.ToolService/ListTools", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `listTools`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Tools_V1_ListToolsResponse> {
+    public func `listTools`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Tools_V1_ListToolsResponse> {
         return await self.client.unary(path: "/tools.v1.ToolService/ListTools", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `executeTool`(request: Tools_V1_ExecuteToolRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Tools_V1_ExecuteToolResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/tools.v1.ToolService/ExecuteTool", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `executeTool`(request: Tools_V1_ExecuteToolRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Tools_V1_ExecuteToolResponse> {
+    public func `executeTool`(request: Tools_V1_ExecuteToolRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Tools_V1_ExecuteToolResponse> {
         return await self.client.unary(path: "/tools.v1.ToolService/ExecuteTool", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
-    internal enum Metadata {
-        internal enum Methods {
-            internal static let listTools = Connect.MethodSpec(name: "ListTools", service: "tools.v1.ToolService", type: .unary)
-            internal static let executeTool = Connect.MethodSpec(name: "ExecuteTool", service: "tools.v1.ToolService", type: .unary)
+    public enum Metadata {
+        public enum Methods {
+            public static let listTools = Connect.MethodSpec(name: "ListTools", service: "tools.v1.ToolService", type: .unary)
+            public static let executeTool = Connect.MethodSpec(name: "ExecuteTool", service: "tools.v1.ToolService", type: .unary)
         }
     }
 }

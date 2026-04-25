@@ -24,701 +24,701 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct AiProxy_V1_ListProxiesRequest: Sendable {
+public struct AiProxy_V1_ListProxiesRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var enabledOnly: Bool = false
+  public var enabledOnly: Bool = false
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_ProxyInfo: @unchecked Sendable {
+public struct AiProxy_V1_ProxyInfo: @unchecked Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String {
+  public var id: String {
     get {_storage._id}
     set {_uniqueStorage()._id = newValue}
   }
 
-  var sourceModel: String {
+  public var sourceModel: String {
     get {_storage._sourceModel}
     set {_uniqueStorage()._sourceModel = newValue}
   }
 
-  var providerModelConfigID: String {
+  public var providerModelConfigID: String {
     get {_storage._providerModelConfigID}
     set {_uniqueStorage()._providerModelConfigID = newValue}
   }
 
-  var apiKey: String {
+  public var apiKey: String {
     get {_storage._apiKey}
     set {_uniqueStorage()._apiKey = newValue}
   }
 
-  var enabled: Bool {
+  public var enabled: Bool {
     get {_storage._enabled}
     set {_uniqueStorage()._enabled = newValue}
   }
 
-  var createdAt: Int64 {
+  public var createdAt: Int64 {
     get {_storage._createdAt}
     set {_uniqueStorage()._createdAt = newValue}
   }
 
-  var updatedAt: Int64 {
+  public var updatedAt: Int64 {
     get {_storage._updatedAt}
     set {_uniqueStorage()._updatedAt = newValue}
   }
 
-  var providerID: String {
+  public var providerID: String {
     get {_storage._providerID}
     set {_uniqueStorage()._providerID = newValue}
   }
 
-  var providerName: String {
+  public var providerName: String {
     get {_storage._providerName}
     set {_uniqueStorage()._providerName = newValue}
   }
 
-  var modelID: String {
+  public var modelID: String {
     get {_storage._modelID}
     set {_uniqueStorage()._modelID = newValue}
   }
 
-  var modelName: String {
+  public var modelName: String {
     get {_storage._modelName}
     set {_uniqueStorage()._modelName = newValue}
   }
 
-  var upstream: String {
+  public var upstream: String {
     get {_storage._upstream}
     set {_uniqueStorage()._upstream = newValue}
   }
 
-  var targetModel: String {
+  public var targetModel: String {
     get {_storage._targetModel}
     set {_uniqueStorage()._targetModel = newValue}
   }
 
-  var supportStreaming: Bool {
+  public var supportStreaming: Bool {
     get {_storage._supportStreaming}
     set {_uniqueStorage()._supportStreaming = newValue}
   }
 
-  var supportTools: Bool {
+  public var supportTools: Bool {
     get {_storage._supportTools}
     set {_uniqueStorage()._supportTools = newValue}
   }
 
-  var supportVision: Bool {
+  public var supportVision: Bool {
     get {_storage._supportVision}
     set {_uniqueStorage()._supportVision = newValue}
   }
 
-  var supportReasoning: Bool {
+  public var supportReasoning: Bool {
     get {_storage._supportReasoning}
     set {_uniqueStorage()._supportReasoning = newValue}
   }
 
-  var defaultMaxTokens: Int32 {
+  public var defaultMaxTokens: Int32 {
     get {_storage._defaultMaxTokens}
     set {_uniqueStorage()._defaultMaxTokens = newValue}
   }
 
-  var contextLength: Int32 {
+  public var contextLength: Int32 {
     get {_storage._contextLength}
     set {_uniqueStorage()._contextLength = newValue}
   }
 
-  var autoCompactLength: Int32 {
+  public var autoCompactLength: Int32 {
     get {_storage._autoCompactLength}
     set {_uniqueStorage()._autoCompactLength = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct AiProxy_V1_ListProxiesResponse: Sendable {
+public struct AiProxy_V1_ListProxiesResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var proxies: [AiProxy_V1_ProxyInfo] = []
+  public var proxies: [AiProxy_V1_ProxyInfo] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_GetProxyRequest: Sendable {
+public struct AiProxy_V1_GetProxyRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String = String()
+  public var id: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_CreateProxyRequest: Sendable {
+public struct AiProxy_V1_CreateProxyRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var sourceModel: String = String()
+  public var sourceModel: String = String()
 
-  var providerModelConfigID: String = String()
+  public var providerModelConfigID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_UpdateProxyRequest: Sendable {
+public struct AiProxy_V1_UpdateProxyRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String = String()
+  public var id: String = String()
 
-  var sourceModel: String = String()
+  public var sourceModel: String = String()
 
-  var providerModelConfigID: String = String()
+  public var providerModelConfigID: String = String()
 
-  var enabled: Bool = false
+  public var enabled: Bool = false
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_DeleteProxyRequest: Sendable {
+public struct AiProxy_V1_DeleteProxyRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String = String()
+  public var id: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_DeleteProxyResponse: Sendable {
+public struct AiProxy_V1_DeleteProxyResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_ListProviderModelConfigsRequest: Sendable {
+public struct AiProxy_V1_ListProviderModelConfigsRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var enabledOnly: Bool = false
+  public var enabledOnly: Bool = false
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_ProviderModelConfigInfo: @unchecked Sendable {
+public struct AiProxy_V1_ProviderModelConfigInfo: @unchecked Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String {
+  public var id: String {
     get {_storage._id}
     set {_uniqueStorage()._id = newValue}
   }
 
-  var providerID: String {
+  public var providerID: String {
     get {_storage._providerID}
     set {_uniqueStorage()._providerID = newValue}
   }
 
-  var providerName: String {
+  public var providerName: String {
     get {_storage._providerName}
     set {_uniqueStorage()._providerName = newValue}
   }
 
-  var modelID: String {
+  public var modelID: String {
     get {_storage._modelID}
     set {_uniqueStorage()._modelID = newValue}
   }
 
-  var modelName: String {
+  public var modelName: String {
     get {_storage._modelName}
     set {_uniqueStorage()._modelName = newValue}
   }
 
-  var upstream: String {
+  public var upstream: String {
     get {_storage._upstream}
     set {_uniqueStorage()._upstream = newValue}
   }
 
-  var apiKey: String {
+  public var apiKey: String {
     get {_storage._apiKey}
     set {_uniqueStorage()._apiKey = newValue}
   }
 
-  var supportStreaming: Bool {
+  public var supportStreaming: Bool {
     get {_storage._supportStreaming}
     set {_uniqueStorage()._supportStreaming = newValue}
   }
 
-  var supportTools: Bool {
+  public var supportTools: Bool {
     get {_storage._supportTools}
     set {_uniqueStorage()._supportTools = newValue}
   }
 
-  var supportVision: Bool {
+  public var supportVision: Bool {
     get {_storage._supportVision}
     set {_uniqueStorage()._supportVision = newValue}
   }
 
-  var supportReasoning: Bool {
+  public var supportReasoning: Bool {
     get {_storage._supportReasoning}
     set {_uniqueStorage()._supportReasoning = newValue}
   }
 
-  var defaultMaxTokens: Int32 {
+  public var defaultMaxTokens: Int32 {
     get {_storage._defaultMaxTokens}
     set {_uniqueStorage()._defaultMaxTokens = newValue}
   }
 
-  var contextLength: Int32 {
+  public var contextLength: Int32 {
     get {_storage._contextLength}
     set {_uniqueStorage()._contextLength = newValue}
   }
 
-  var autoCompactLength: Int32 {
+  public var autoCompactLength: Int32 {
     get {_storage._autoCompactLength}
     set {_uniqueStorage()._autoCompactLength = newValue}
   }
 
-  var enabled: Bool {
+  public var enabled: Bool {
     get {_storage._enabled}
     set {_uniqueStorage()._enabled = newValue}
   }
 
-  var createdAt: Int64 {
+  public var createdAt: Int64 {
     get {_storage._createdAt}
     set {_uniqueStorage()._createdAt = newValue}
   }
 
-  var updatedAt: Int64 {
+  public var updatedAt: Int64 {
     get {_storage._updatedAt}
     set {_uniqueStorage()._updatedAt = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct AiProxy_V1_ListProviderModelConfigsResponse: Sendable {
+public struct AiProxy_V1_ListProviderModelConfigsResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var configs: [AiProxy_V1_ProviderModelConfigInfo] = []
+  public var configs: [AiProxy_V1_ProviderModelConfigInfo] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_GetProviderModelConfigRequest: Sendable {
+public struct AiProxy_V1_GetProviderModelConfigRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String = String()
+  public var id: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_CreateProviderModelConfigRequest: Sendable {
+public struct AiProxy_V1_CreateProviderModelConfigRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var providerID: String = String()
+  public var providerID: String = String()
 
-  var providerName: String = String()
+  public var providerName: String = String()
 
-  var modelID: String = String()
+  public var modelID: String = String()
 
-  var modelName: String = String()
+  public var modelName: String = String()
 
-  var upstream: String = String()
+  public var upstream: String = String()
 
-  var apiKey: String = String()
+  public var apiKey: String = String()
 
-  var supportStreaming: Bool = false
+  public var supportStreaming: Bool = false
 
-  var supportTools: Bool = false
+  public var supportTools: Bool = false
 
-  var supportVision: Bool = false
+  public var supportVision: Bool = false
 
-  var supportReasoning: Bool = false
+  public var supportReasoning: Bool = false
 
-  var defaultMaxTokens: Int32 = 0
+  public var defaultMaxTokens: Int32 = 0
 
-  var contextLength: Int32 = 0
+  public var contextLength: Int32 = 0
 
-  var autoCompactLength: Int32 = 0
+  public var autoCompactLength: Int32 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_UpdateProviderModelConfigRequest: Sendable {
+public struct AiProxy_V1_UpdateProviderModelConfigRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String = String()
+  public var id: String = String()
 
-  var providerName: String = String()
+  public var providerName: String = String()
 
-  var modelName: String = String()
+  public var modelName: String = String()
 
-  var upstream: String = String()
+  public var upstream: String = String()
 
-  var apiKey: String = String()
+  public var apiKey: String = String()
 
-  var supportStreaming: Bool = false
+  public var supportStreaming: Bool = false
 
-  var supportTools: Bool = false
+  public var supportTools: Bool = false
 
-  var supportVision: Bool = false
+  public var supportVision: Bool = false
 
-  var supportReasoning: Bool = false
+  public var supportReasoning: Bool = false
 
-  var defaultMaxTokens: Int32 = 0
+  public var defaultMaxTokens: Int32 = 0
 
-  var contextLength: Int32 = 0
+  public var contextLength: Int32 = 0
 
-  var autoCompactLength: Int32 = 0
+  public var autoCompactLength: Int32 = 0
 
-  var enabled: Bool = false
+  public var enabled: Bool = false
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_DeleteProviderModelConfigRequest: Sendable {
+public struct AiProxy_V1_DeleteProviderModelConfigRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String = String()
+  public var id: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_DeleteProviderModelConfigResponse: Sendable {
+public struct AiProxy_V1_DeleteProviderModelConfigResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_ListProvidersRequest: Sendable {
+public struct AiProxy_V1_ListProvidersRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_ProviderInfo: Sendable {
+public struct AiProxy_V1_ProviderInfo: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String = String()
+  public var id: String = String()
 
-  var name: String = String()
+  public var name: String = String()
 
-  var api: String = String()
+  public var api: String = String()
 
-  var doc: String = String()
+  public var doc: String = String()
 
-  var env: [String] = []
+  public var env: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_ListProvidersResponse: Sendable {
+public struct AiProxy_V1_ListProvidersResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var providers: [AiProxy_V1_ProviderInfo] = []
+  public var providers: [AiProxy_V1_ProviderInfo] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_ListProviderModelsRequest: Sendable {
+public struct AiProxy_V1_ListProviderModelsRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var providerID: String = String()
+  public var providerID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_ProviderModelInfo: Sendable {
+public struct AiProxy_V1_ProviderModelInfo: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var providerID: String = String()
+  public var providerID: String = String()
 
-  var providerName: String = String()
+  public var providerName: String = String()
 
-  var modelID: String = String()
+  public var modelID: String = String()
 
-  var modelName: String = String()
+  public var modelName: String = String()
 
-  var upstream: String = String()
+  public var upstream: String = String()
 
-  var supportStreaming: Bool = false
+  public var supportStreaming: Bool = false
 
-  var supportTools: Bool = false
+  public var supportTools: Bool = false
 
-  var supportVision: Bool = false
+  public var supportVision: Bool = false
 
-  var supportReasoning: Bool = false
+  public var supportReasoning: Bool = false
 
-  var defaultMaxTokens: Int32 = 0
+  public var defaultMaxTokens: Int32 = 0
 
-  var contextLength: Int32 = 0
+  public var contextLength: Int32 = 0
 
-  var autoCompactLength: Int32 = 0
+  public var autoCompactLength: Int32 = 0
 
-  var status: String = String()
+  public var status: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_ListProviderModelsResponse: Sendable {
+public struct AiProxy_V1_ListProviderModelsResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var models: [AiProxy_V1_ProviderModelInfo] = []
+  public var models: [AiProxy_V1_ProviderModelInfo] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_TestProviderModelConfigRequest: Sendable {
+public struct AiProxy_V1_TestProviderModelConfigRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String = String()
+  public var id: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_TestProviderModelConfigResponse: Sendable {
+public struct AiProxy_V1_TestProviderModelConfigResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var success: Bool = false
+  public var success: Bool = false
 
-  var message: String = String()
+  public var message: String = String()
 
-  var statusCode: Int32 = 0
+  public var statusCode: Int32 = 0
 
-  var latencyMs: Int32 = 0
+  public var latencyMs: Int32 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_TestProxyRequest: Sendable {
+public struct AiProxy_V1_TestProxyRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String = String()
+  public var id: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_TestProxyResponse: Sendable {
+public struct AiProxy_V1_TestProxyResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var success: Bool = false
+  public var success: Bool = false
 
-  var message: String = String()
+  public var message: String = String()
 
-  var statusCode: Int32 = 0
+  public var statusCode: Int32 = 0
 
-  var latencyMs: Int32 = 0
+  public var latencyMs: Int32 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_QueryLogsRequest: Sendable {
+public struct AiProxy_V1_QueryLogsRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var proxyID: String = String()
+  public var proxyID: String = String()
 
-  var fromTs: Int64 = 0
+  public var fromTs: Int64 = 0
 
-  var toTs: Int64 = 0
+  public var toTs: Int64 = 0
 
-  var limit: Int32 = 0
+  public var limit: Int32 = 0
 
-  var offset: Int32 = 0
+  public var offset: Int32 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_LogEntry: Sendable {
+public struct AiProxy_V1_LogEntry: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String = String()
+  public var id: String = String()
 
-  var proxyID: String = String()
+  public var proxyID: String = String()
 
-  var sourceModel: String = String()
+  public var sourceModel: String = String()
 
-  var targetModel: String = String()
+  public var targetModel: String = String()
 
-  var upstream: String = String()
+  public var upstream: String = String()
 
-  var inputTokens: Int64 = 0
+  public var inputTokens: Int64 = 0
 
-  var outputTokens: Int64 = 0
+  public var outputTokens: Int64 = 0
 
-  var totalTokens: Int64 = 0
+  public var totalTokens: Int64 = 0
 
-  var durationMs: Int64 = 0
+  public var durationMs: Int64 = 0
 
-  var timeToFirstTokenMs: Int64 = 0
+  public var timeToFirstTokenMs: Int64 = 0
 
-  var isStream: Bool = false
+  public var isStream: Bool = false
 
-  var isSuccess: Bool = false
+  public var isSuccess: Bool = false
 
-  var errorMessage: String = String()
+  public var errorMessage: String = String()
 
-  var createdAt: Int64 = 0
+  public var createdAt: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_QueryLogsResponse: Sendable {
+public struct AiProxy_V1_QueryLogsResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var logs: [AiProxy_V1_LogEntry] = []
+  public var logs: [AiProxy_V1_LogEntry] = []
 
-  var total: Int64 = 0
+  public var total: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_GetTokenStatsRequest: Sendable {
+public struct AiProxy_V1_GetTokenStatsRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var proxyID: String = String()
+  public var proxyID: String = String()
 
-  var fromTs: Int64 = 0
+  public var fromTs: Int64 = 0
 
-  var toTs: Int64 = 0
+  public var toTs: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct AiProxy_V1_TokenStatsResponse: Sendable {
+public struct AiProxy_V1_TokenStatsResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var totalInputTokens: Int64 = 0
+  public var totalInputTokens: Int64 = 0
 
-  var totalOutputTokens: Int64 = 0
+  public var totalOutputTokens: Int64 = 0
 
-  var totalTokens: Int64 = 0
+  public var totalTokens: Int64 = 0
 
-  var requestCount: Int64 = 0
+  public var requestCount: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -726,10 +726,10 @@ struct AiProxy_V1_TokenStatsResponse: Sendable {
 fileprivate let _protobuf_package = "ai_proxy.v1"
 
 extension AiProxy_V1_ListProxiesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListProxiesRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}enabledOnly\0")
+  public static let protoMessageName: String = _protobuf_package + ".ListProxiesRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}enabledOnly\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -741,14 +741,14 @@ extension AiProxy_V1_ListProxiesRequest: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.enabledOnly != false {
       try visitor.visitSingularBoolField(value: self.enabledOnly, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_ListProxiesRequest, rhs: AiProxy_V1_ListProxiesRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_ListProxiesRequest, rhs: AiProxy_V1_ListProxiesRequest) -> Bool {
     if lhs.enabledOnly != rhs.enabledOnly {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -756,8 +756,8 @@ extension AiProxy_V1_ListProxiesRequest: SwiftProtobuf.Message, SwiftProtobuf._M
 }
 
 extension AiProxy_V1_ProxyInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ProxyInfo"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}sourceModel\0\u{1}providerModelConfigId\0\u{1}apiKey\0\u{1}enabled\0\u{1}createdAt\0\u{1}updatedAt\0\u{1}providerId\0\u{1}providerName\0\u{1}modelId\0\u{1}modelName\0\u{1}upstream\0\u{1}targetModel\0\u{1}supportStreaming\0\u{1}supportTools\0\u{1}supportVision\0\u{1}supportReasoning\0\u{1}defaultMaxTokens\0\u{1}contextLength\0\u{1}autoCompactLength\0")
+  public static let protoMessageName: String = _protobuf_package + ".ProxyInfo"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}sourceModel\0\u{1}providerModelConfigId\0\u{1}apiKey\0\u{1}enabled\0\u{1}createdAt\0\u{1}updatedAt\0\u{1}providerId\0\u{1}providerName\0\u{1}modelId\0\u{1}modelName\0\u{1}upstream\0\u{1}targetModel\0\u{1}supportStreaming\0\u{1}supportTools\0\u{1}supportVision\0\u{1}supportReasoning\0\u{1}defaultMaxTokens\0\u{1}contextLength\0\u{1}autoCompactLength\0")
 
   fileprivate class _StorageClass {
     var _id: String = String()
@@ -820,7 +820,7 @@ extension AiProxy_V1_ProxyInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -854,7 +854,7 @@ extension AiProxy_V1_ProxyInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if !_storage._id.isEmpty {
         try visitor.visitSingularStringField(value: _storage._id, fieldNumber: 1)
@@ -920,7 +920,7 @@ extension AiProxy_V1_ProxyInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_ProxyInfo, rhs: AiProxy_V1_ProxyInfo) -> Bool {
+  public static func ==(lhs: AiProxy_V1_ProxyInfo, rhs: AiProxy_V1_ProxyInfo) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -955,10 +955,10 @@ extension AiProxy_V1_ProxyInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImp
 }
 
 extension AiProxy_V1_ListProxiesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListProxiesResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}proxies\0")
+  public static let protoMessageName: String = _protobuf_package + ".ListProxiesResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}proxies\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -970,14 +970,14 @@ extension AiProxy_V1_ListProxiesResponse: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.proxies.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.proxies, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_ListProxiesResponse, rhs: AiProxy_V1_ListProxiesResponse) -> Bool {
+  public static func ==(lhs: AiProxy_V1_ListProxiesResponse, rhs: AiProxy_V1_ListProxiesResponse) -> Bool {
     if lhs.proxies != rhs.proxies {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -985,10 +985,10 @@ extension AiProxy_V1_ListProxiesResponse: SwiftProtobuf.Message, SwiftProtobuf._
 }
 
 extension AiProxy_V1_GetProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetProxyRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0")
+  public static let protoMessageName: String = _protobuf_package + ".GetProxyRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1000,14 +1000,14 @@ extension AiProxy_V1_GetProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._Mess
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.id.isEmpty {
       try visitor.visitSingularStringField(value: self.id, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_GetProxyRequest, rhs: AiProxy_V1_GetProxyRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_GetProxyRequest, rhs: AiProxy_V1_GetProxyRequest) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1015,10 +1015,10 @@ extension AiProxy_V1_GetProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._Mess
 }
 
 extension AiProxy_V1_CreateProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".CreateProxyRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}sourceModel\0\u{1}providerModelConfigId\0")
+  public static let protoMessageName: String = _protobuf_package + ".CreateProxyRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}sourceModel\0\u{1}providerModelConfigId\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1031,7 +1031,7 @@ extension AiProxy_V1_CreateProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.sourceModel.isEmpty {
       try visitor.visitSingularStringField(value: self.sourceModel, fieldNumber: 1)
     }
@@ -1041,7 +1041,7 @@ extension AiProxy_V1_CreateProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_CreateProxyRequest, rhs: AiProxy_V1_CreateProxyRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_CreateProxyRequest, rhs: AiProxy_V1_CreateProxyRequest) -> Bool {
     if lhs.sourceModel != rhs.sourceModel {return false}
     if lhs.providerModelConfigID != rhs.providerModelConfigID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1050,10 +1050,10 @@ extension AiProxy_V1_CreateProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._M
 }
 
 extension AiProxy_V1_UpdateProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".UpdateProxyRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}sourceModel\0\u{1}providerModelConfigId\0\u{1}enabled\0")
+  public static let protoMessageName: String = _protobuf_package + ".UpdateProxyRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}sourceModel\0\u{1}providerModelConfigId\0\u{1}enabled\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1068,7 +1068,7 @@ extension AiProxy_V1_UpdateProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.id.isEmpty {
       try visitor.visitSingularStringField(value: self.id, fieldNumber: 1)
     }
@@ -1084,7 +1084,7 @@ extension AiProxy_V1_UpdateProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_UpdateProxyRequest, rhs: AiProxy_V1_UpdateProxyRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_UpdateProxyRequest, rhs: AiProxy_V1_UpdateProxyRequest) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.sourceModel != rhs.sourceModel {return false}
     if lhs.providerModelConfigID != rhs.providerModelConfigID {return false}
@@ -1095,10 +1095,10 @@ extension AiProxy_V1_UpdateProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._M
 }
 
 extension AiProxy_V1_DeleteProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DeleteProxyRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0")
+  public static let protoMessageName: String = _protobuf_package + ".DeleteProxyRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1110,14 +1110,14 @@ extension AiProxy_V1_DeleteProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.id.isEmpty {
       try visitor.visitSingularStringField(value: self.id, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_DeleteProxyRequest, rhs: AiProxy_V1_DeleteProxyRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_DeleteProxyRequest, rhs: AiProxy_V1_DeleteProxyRequest) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1125,29 +1125,29 @@ extension AiProxy_V1_DeleteProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._M
 }
 
 extension AiProxy_V1_DeleteProxyResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DeleteProxyResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".DeleteProxyResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     // Load everything into unknown fields
     while try decoder.nextFieldNumber() != nil {}
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_DeleteProxyResponse, rhs: AiProxy_V1_DeleteProxyResponse) -> Bool {
+  public static func ==(lhs: AiProxy_V1_DeleteProxyResponse, rhs: AiProxy_V1_DeleteProxyResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension AiProxy_V1_ListProviderModelConfigsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListProviderModelConfigsRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}enabledOnly\0")
+  public static let protoMessageName: String = _protobuf_package + ".ListProviderModelConfigsRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}enabledOnly\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1159,14 +1159,14 @@ extension AiProxy_V1_ListProviderModelConfigsRequest: SwiftProtobuf.Message, Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.enabledOnly != false {
       try visitor.visitSingularBoolField(value: self.enabledOnly, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_ListProviderModelConfigsRequest, rhs: AiProxy_V1_ListProviderModelConfigsRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_ListProviderModelConfigsRequest, rhs: AiProxy_V1_ListProviderModelConfigsRequest) -> Bool {
     if lhs.enabledOnly != rhs.enabledOnly {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1174,8 +1174,8 @@ extension AiProxy_V1_ListProviderModelConfigsRequest: SwiftProtobuf.Message, Swi
 }
 
 extension AiProxy_V1_ProviderModelConfigInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ProviderModelConfigInfo"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}providerId\0\u{1}providerName\0\u{1}modelId\0\u{1}modelName\0\u{1}upstream\0\u{1}apiKey\0\u{1}supportStreaming\0\u{1}supportTools\0\u{1}supportVision\0\u{1}supportReasoning\0\u{1}defaultMaxTokens\0\u{1}contextLength\0\u{1}autoCompactLength\0\u{1}enabled\0\u{1}createdAt\0\u{1}updatedAt\0")
+  public static let protoMessageName: String = _protobuf_package + ".ProviderModelConfigInfo"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}providerId\0\u{1}providerName\0\u{1}modelId\0\u{1}modelName\0\u{1}upstream\0\u{1}apiKey\0\u{1}supportStreaming\0\u{1}supportTools\0\u{1}supportVision\0\u{1}supportReasoning\0\u{1}defaultMaxTokens\0\u{1}contextLength\0\u{1}autoCompactLength\0\u{1}enabled\0\u{1}createdAt\0\u{1}updatedAt\0")
 
   fileprivate class _StorageClass {
     var _id: String = String()
@@ -1232,7 +1232,7 @@ extension AiProxy_V1_ProviderModelConfigInfo: SwiftProtobuf.Message, SwiftProtob
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -1263,7 +1263,7 @@ extension AiProxy_V1_ProviderModelConfigInfo: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if !_storage._id.isEmpty {
         try visitor.visitSingularStringField(value: _storage._id, fieldNumber: 1)
@@ -1320,7 +1320,7 @@ extension AiProxy_V1_ProviderModelConfigInfo: SwiftProtobuf.Message, SwiftProtob
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_ProviderModelConfigInfo, rhs: AiProxy_V1_ProviderModelConfigInfo) -> Bool {
+  public static func ==(lhs: AiProxy_V1_ProviderModelConfigInfo, rhs: AiProxy_V1_ProviderModelConfigInfo) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -1352,10 +1352,10 @@ extension AiProxy_V1_ProviderModelConfigInfo: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension AiProxy_V1_ListProviderModelConfigsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListProviderModelConfigsResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}configs\0")
+  public static let protoMessageName: String = _protobuf_package + ".ListProviderModelConfigsResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}configs\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1367,14 +1367,14 @@ extension AiProxy_V1_ListProviderModelConfigsResponse: SwiftProtobuf.Message, Sw
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.configs.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.configs, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_ListProviderModelConfigsResponse, rhs: AiProxy_V1_ListProviderModelConfigsResponse) -> Bool {
+  public static func ==(lhs: AiProxy_V1_ListProviderModelConfigsResponse, rhs: AiProxy_V1_ListProviderModelConfigsResponse) -> Bool {
     if lhs.configs != rhs.configs {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1382,10 +1382,10 @@ extension AiProxy_V1_ListProviderModelConfigsResponse: SwiftProtobuf.Message, Sw
 }
 
 extension AiProxy_V1_GetProviderModelConfigRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetProviderModelConfigRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0")
+  public static let protoMessageName: String = _protobuf_package + ".GetProviderModelConfigRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1397,14 +1397,14 @@ extension AiProxy_V1_GetProviderModelConfigRequest: SwiftProtobuf.Message, Swift
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.id.isEmpty {
       try visitor.visitSingularStringField(value: self.id, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_GetProviderModelConfigRequest, rhs: AiProxy_V1_GetProviderModelConfigRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_GetProviderModelConfigRequest, rhs: AiProxy_V1_GetProviderModelConfigRequest) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1412,10 +1412,10 @@ extension AiProxy_V1_GetProviderModelConfigRequest: SwiftProtobuf.Message, Swift
 }
 
 extension AiProxy_V1_CreateProviderModelConfigRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".CreateProviderModelConfigRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}providerId\0\u{1}providerName\0\u{1}modelId\0\u{1}modelName\0\u{1}upstream\0\u{1}apiKey\0\u{1}supportStreaming\0\u{1}supportTools\0\u{1}supportVision\0\u{1}supportReasoning\0\u{1}defaultMaxTokens\0\u{1}contextLength\0\u{1}autoCompactLength\0")
+  public static let protoMessageName: String = _protobuf_package + ".CreateProviderModelConfigRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}providerId\0\u{1}providerName\0\u{1}modelId\0\u{1}modelName\0\u{1}upstream\0\u{1}apiKey\0\u{1}supportStreaming\0\u{1}supportTools\0\u{1}supportVision\0\u{1}supportReasoning\0\u{1}defaultMaxTokens\0\u{1}contextLength\0\u{1}autoCompactLength\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1439,7 +1439,7 @@ extension AiProxy_V1_CreateProviderModelConfigRequest: SwiftProtobuf.Message, Sw
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.providerID.isEmpty {
       try visitor.visitSingularStringField(value: self.providerID, fieldNumber: 1)
     }
@@ -1482,7 +1482,7 @@ extension AiProxy_V1_CreateProviderModelConfigRequest: SwiftProtobuf.Message, Sw
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_CreateProviderModelConfigRequest, rhs: AiProxy_V1_CreateProviderModelConfigRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_CreateProviderModelConfigRequest, rhs: AiProxy_V1_CreateProviderModelConfigRequest) -> Bool {
     if lhs.providerID != rhs.providerID {return false}
     if lhs.providerName != rhs.providerName {return false}
     if lhs.modelID != rhs.modelID {return false}
@@ -1502,10 +1502,10 @@ extension AiProxy_V1_CreateProviderModelConfigRequest: SwiftProtobuf.Message, Sw
 }
 
 extension AiProxy_V1_UpdateProviderModelConfigRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".UpdateProviderModelConfigRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}providerName\0\u{1}modelName\0\u{1}upstream\0\u{1}apiKey\0\u{1}supportStreaming\0\u{1}supportTools\0\u{1}supportVision\0\u{1}supportReasoning\0\u{1}defaultMaxTokens\0\u{1}contextLength\0\u{1}autoCompactLength\0\u{1}enabled\0")
+  public static let protoMessageName: String = _protobuf_package + ".UpdateProviderModelConfigRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}providerName\0\u{1}modelName\0\u{1}upstream\0\u{1}apiKey\0\u{1}supportStreaming\0\u{1}supportTools\0\u{1}supportVision\0\u{1}supportReasoning\0\u{1}defaultMaxTokens\0\u{1}contextLength\0\u{1}autoCompactLength\0\u{1}enabled\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1529,7 +1529,7 @@ extension AiProxy_V1_UpdateProviderModelConfigRequest: SwiftProtobuf.Message, Sw
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.id.isEmpty {
       try visitor.visitSingularStringField(value: self.id, fieldNumber: 1)
     }
@@ -1572,7 +1572,7 @@ extension AiProxy_V1_UpdateProviderModelConfigRequest: SwiftProtobuf.Message, Sw
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_UpdateProviderModelConfigRequest, rhs: AiProxy_V1_UpdateProviderModelConfigRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_UpdateProviderModelConfigRequest, rhs: AiProxy_V1_UpdateProviderModelConfigRequest) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.providerName != rhs.providerName {return false}
     if lhs.modelName != rhs.modelName {return false}
@@ -1592,10 +1592,10 @@ extension AiProxy_V1_UpdateProviderModelConfigRequest: SwiftProtobuf.Message, Sw
 }
 
 extension AiProxy_V1_DeleteProviderModelConfigRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DeleteProviderModelConfigRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0")
+  public static let protoMessageName: String = _protobuf_package + ".DeleteProviderModelConfigRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1607,14 +1607,14 @@ extension AiProxy_V1_DeleteProviderModelConfigRequest: SwiftProtobuf.Message, Sw
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.id.isEmpty {
       try visitor.visitSingularStringField(value: self.id, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_DeleteProviderModelConfigRequest, rhs: AiProxy_V1_DeleteProviderModelConfigRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_DeleteProviderModelConfigRequest, rhs: AiProxy_V1_DeleteProviderModelConfigRequest) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1622,48 +1622,48 @@ extension AiProxy_V1_DeleteProviderModelConfigRequest: SwiftProtobuf.Message, Sw
 }
 
 extension AiProxy_V1_DeleteProviderModelConfigResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DeleteProviderModelConfigResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".DeleteProviderModelConfigResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     // Load everything into unknown fields
     while try decoder.nextFieldNumber() != nil {}
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_DeleteProviderModelConfigResponse, rhs: AiProxy_V1_DeleteProviderModelConfigResponse) -> Bool {
+  public static func ==(lhs: AiProxy_V1_DeleteProviderModelConfigResponse, rhs: AiProxy_V1_DeleteProviderModelConfigResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension AiProxy_V1_ListProvidersRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListProvidersRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".ListProvidersRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     // Load everything into unknown fields
     while try decoder.nextFieldNumber() != nil {}
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_ListProvidersRequest, rhs: AiProxy_V1_ListProvidersRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_ListProvidersRequest, rhs: AiProxy_V1_ListProvidersRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension AiProxy_V1_ProviderInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ProviderInfo"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}name\0\u{1}api\0\u{1}doc\0\u{1}env\0")
+  public static let protoMessageName: String = _protobuf_package + ".ProviderInfo"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}name\0\u{1}api\0\u{1}doc\0\u{1}env\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1679,7 +1679,7 @@ extension AiProxy_V1_ProviderInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.id.isEmpty {
       try visitor.visitSingularStringField(value: self.id, fieldNumber: 1)
     }
@@ -1698,7 +1698,7 @@ extension AiProxy_V1_ProviderInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_ProviderInfo, rhs: AiProxy_V1_ProviderInfo) -> Bool {
+  public static func ==(lhs: AiProxy_V1_ProviderInfo, rhs: AiProxy_V1_ProviderInfo) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.name != rhs.name {return false}
     if lhs.api != rhs.api {return false}
@@ -1710,10 +1710,10 @@ extension AiProxy_V1_ProviderInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
 }
 
 extension AiProxy_V1_ListProvidersResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListProvidersResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}providers\0")
+  public static let protoMessageName: String = _protobuf_package + ".ListProvidersResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}providers\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1725,14 +1725,14 @@ extension AiProxy_V1_ListProvidersResponse: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.providers.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.providers, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_ListProvidersResponse, rhs: AiProxy_V1_ListProvidersResponse) -> Bool {
+  public static func ==(lhs: AiProxy_V1_ListProvidersResponse, rhs: AiProxy_V1_ListProvidersResponse) -> Bool {
     if lhs.providers != rhs.providers {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1740,10 +1740,10 @@ extension AiProxy_V1_ListProvidersResponse: SwiftProtobuf.Message, SwiftProtobuf
 }
 
 extension AiProxy_V1_ListProviderModelsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListProviderModelsRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}providerId\0")
+  public static let protoMessageName: String = _protobuf_package + ".ListProviderModelsRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}providerId\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1755,14 +1755,14 @@ extension AiProxy_V1_ListProviderModelsRequest: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.providerID.isEmpty {
       try visitor.visitSingularStringField(value: self.providerID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_ListProviderModelsRequest, rhs: AiProxy_V1_ListProviderModelsRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_ListProviderModelsRequest, rhs: AiProxy_V1_ListProviderModelsRequest) -> Bool {
     if lhs.providerID != rhs.providerID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1770,10 +1770,10 @@ extension AiProxy_V1_ListProviderModelsRequest: SwiftProtobuf.Message, SwiftProt
 }
 
 extension AiProxy_V1_ProviderModelInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ProviderModelInfo"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}providerId\0\u{1}providerName\0\u{1}modelId\0\u{1}modelName\0\u{1}upstream\0\u{1}supportStreaming\0\u{1}supportTools\0\u{1}supportVision\0\u{1}supportReasoning\0\u{1}defaultMaxTokens\0\u{1}contextLength\0\u{1}autoCompactLength\0\u{1}status\0")
+  public static let protoMessageName: String = _protobuf_package + ".ProviderModelInfo"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}providerId\0\u{1}providerName\0\u{1}modelId\0\u{1}modelName\0\u{1}upstream\0\u{1}supportStreaming\0\u{1}supportTools\0\u{1}supportVision\0\u{1}supportReasoning\0\u{1}defaultMaxTokens\0\u{1}contextLength\0\u{1}autoCompactLength\0\u{1}status\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1797,7 +1797,7 @@ extension AiProxy_V1_ProviderModelInfo: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.providerID.isEmpty {
       try visitor.visitSingularStringField(value: self.providerID, fieldNumber: 1)
     }
@@ -1840,7 +1840,7 @@ extension AiProxy_V1_ProviderModelInfo: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_ProviderModelInfo, rhs: AiProxy_V1_ProviderModelInfo) -> Bool {
+  public static func ==(lhs: AiProxy_V1_ProviderModelInfo, rhs: AiProxy_V1_ProviderModelInfo) -> Bool {
     if lhs.providerID != rhs.providerID {return false}
     if lhs.providerName != rhs.providerName {return false}
     if lhs.modelID != rhs.modelID {return false}
@@ -1860,10 +1860,10 @@ extension AiProxy_V1_ProviderModelInfo: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension AiProxy_V1_ListProviderModelsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListProviderModelsResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}models\0")
+  public static let protoMessageName: String = _protobuf_package + ".ListProviderModelsResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}models\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1875,14 +1875,14 @@ extension AiProxy_V1_ListProviderModelsResponse: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.models.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.models, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_ListProviderModelsResponse, rhs: AiProxy_V1_ListProviderModelsResponse) -> Bool {
+  public static func ==(lhs: AiProxy_V1_ListProviderModelsResponse, rhs: AiProxy_V1_ListProviderModelsResponse) -> Bool {
     if lhs.models != rhs.models {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1890,10 +1890,10 @@ extension AiProxy_V1_ListProviderModelsResponse: SwiftProtobuf.Message, SwiftPro
 }
 
 extension AiProxy_V1_TestProviderModelConfigRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TestProviderModelConfigRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0")
+  public static let protoMessageName: String = _protobuf_package + ".TestProviderModelConfigRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1905,14 +1905,14 @@ extension AiProxy_V1_TestProviderModelConfigRequest: SwiftProtobuf.Message, Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.id.isEmpty {
       try visitor.visitSingularStringField(value: self.id, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_TestProviderModelConfigRequest, rhs: AiProxy_V1_TestProviderModelConfigRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_TestProviderModelConfigRequest, rhs: AiProxy_V1_TestProviderModelConfigRequest) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1920,10 +1920,10 @@ extension AiProxy_V1_TestProviderModelConfigRequest: SwiftProtobuf.Message, Swif
 }
 
 extension AiProxy_V1_TestProviderModelConfigResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TestProviderModelConfigResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}success\0\u{1}message\0\u{1}statusCode\0\u{1}latencyMs\0")
+  public static let protoMessageName: String = _protobuf_package + ".TestProviderModelConfigResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}success\0\u{1}message\0\u{1}statusCode\0\u{1}latencyMs\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1938,7 +1938,7 @@ extension AiProxy_V1_TestProviderModelConfigResponse: SwiftProtobuf.Message, Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.success != false {
       try visitor.visitSingularBoolField(value: self.success, fieldNumber: 1)
     }
@@ -1954,7 +1954,7 @@ extension AiProxy_V1_TestProviderModelConfigResponse: SwiftProtobuf.Message, Swi
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_TestProviderModelConfigResponse, rhs: AiProxy_V1_TestProviderModelConfigResponse) -> Bool {
+  public static func ==(lhs: AiProxy_V1_TestProviderModelConfigResponse, rhs: AiProxy_V1_TestProviderModelConfigResponse) -> Bool {
     if lhs.success != rhs.success {return false}
     if lhs.message != rhs.message {return false}
     if lhs.statusCode != rhs.statusCode {return false}
@@ -1965,10 +1965,10 @@ extension AiProxy_V1_TestProviderModelConfigResponse: SwiftProtobuf.Message, Swi
 }
 
 extension AiProxy_V1_TestProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TestProxyRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0")
+  public static let protoMessageName: String = _protobuf_package + ".TestProxyRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1980,14 +1980,14 @@ extension AiProxy_V1_TestProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.id.isEmpty {
       try visitor.visitSingularStringField(value: self.id, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_TestProxyRequest, rhs: AiProxy_V1_TestProxyRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_TestProxyRequest, rhs: AiProxy_V1_TestProxyRequest) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1995,10 +1995,10 @@ extension AiProxy_V1_TestProxyRequest: SwiftProtobuf.Message, SwiftProtobuf._Mes
 }
 
 extension AiProxy_V1_TestProxyResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TestProxyResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}success\0\u{1}message\0\u{1}statusCode\0\u{1}latencyMs\0")
+  public static let protoMessageName: String = _protobuf_package + ".TestProxyResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}success\0\u{1}message\0\u{1}statusCode\0\u{1}latencyMs\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2013,7 +2013,7 @@ extension AiProxy_V1_TestProxyResponse: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.success != false {
       try visitor.visitSingularBoolField(value: self.success, fieldNumber: 1)
     }
@@ -2029,7 +2029,7 @@ extension AiProxy_V1_TestProxyResponse: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_TestProxyResponse, rhs: AiProxy_V1_TestProxyResponse) -> Bool {
+  public static func ==(lhs: AiProxy_V1_TestProxyResponse, rhs: AiProxy_V1_TestProxyResponse) -> Bool {
     if lhs.success != rhs.success {return false}
     if lhs.message != rhs.message {return false}
     if lhs.statusCode != rhs.statusCode {return false}
@@ -2040,10 +2040,10 @@ extension AiProxy_V1_TestProxyResponse: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension AiProxy_V1_QueryLogsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryLogsRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}proxyId\0\u{1}fromTs\0\u{1}toTs\0\u{1}limit\0\u{1}offset\0")
+  public static let protoMessageName: String = _protobuf_package + ".QueryLogsRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}proxyId\0\u{1}fromTs\0\u{1}toTs\0\u{1}limit\0\u{1}offset\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2059,7 +2059,7 @@ extension AiProxy_V1_QueryLogsRequest: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.proxyID.isEmpty {
       try visitor.visitSingularStringField(value: self.proxyID, fieldNumber: 1)
     }
@@ -2078,7 +2078,7 @@ extension AiProxy_V1_QueryLogsRequest: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_QueryLogsRequest, rhs: AiProxy_V1_QueryLogsRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_QueryLogsRequest, rhs: AiProxy_V1_QueryLogsRequest) -> Bool {
     if lhs.proxyID != rhs.proxyID {return false}
     if lhs.fromTs != rhs.fromTs {return false}
     if lhs.toTs != rhs.toTs {return false}
@@ -2090,10 +2090,10 @@ extension AiProxy_V1_QueryLogsRequest: SwiftProtobuf.Message, SwiftProtobuf._Mes
 }
 
 extension AiProxy_V1_LogEntry: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".LogEntry"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}proxyId\0\u{1}sourceModel\0\u{1}targetModel\0\u{1}upstream\0\u{1}inputTokens\0\u{1}outputTokens\0\u{1}totalTokens\0\u{1}durationMs\0\u{1}timeToFirstTokenMs\0\u{1}isStream\0\u{1}isSuccess\0\u{1}errorMessage\0\u{1}createdAt\0")
+  public static let protoMessageName: String = _protobuf_package + ".LogEntry"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}proxyId\0\u{1}sourceModel\0\u{1}targetModel\0\u{1}upstream\0\u{1}inputTokens\0\u{1}outputTokens\0\u{1}totalTokens\0\u{1}durationMs\0\u{1}timeToFirstTokenMs\0\u{1}isStream\0\u{1}isSuccess\0\u{1}errorMessage\0\u{1}createdAt\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2118,7 +2118,7 @@ extension AiProxy_V1_LogEntry: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.id.isEmpty {
       try visitor.visitSingularStringField(value: self.id, fieldNumber: 1)
     }
@@ -2164,7 +2164,7 @@ extension AiProxy_V1_LogEntry: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_LogEntry, rhs: AiProxy_V1_LogEntry) -> Bool {
+  public static func ==(lhs: AiProxy_V1_LogEntry, rhs: AiProxy_V1_LogEntry) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.proxyID != rhs.proxyID {return false}
     if lhs.sourceModel != rhs.sourceModel {return false}
@@ -2185,10 +2185,10 @@ extension AiProxy_V1_LogEntry: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
 }
 
 extension AiProxy_V1_QueryLogsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryLogsResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}logs\0\u{1}total\0")
+  public static let protoMessageName: String = _protobuf_package + ".QueryLogsResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}logs\0\u{1}total\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2201,7 +2201,7 @@ extension AiProxy_V1_QueryLogsResponse: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.logs.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.logs, fieldNumber: 1)
     }
@@ -2211,7 +2211,7 @@ extension AiProxy_V1_QueryLogsResponse: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_QueryLogsResponse, rhs: AiProxy_V1_QueryLogsResponse) -> Bool {
+  public static func ==(lhs: AiProxy_V1_QueryLogsResponse, rhs: AiProxy_V1_QueryLogsResponse) -> Bool {
     if lhs.logs != rhs.logs {return false}
     if lhs.total != rhs.total {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -2220,10 +2220,10 @@ extension AiProxy_V1_QueryLogsResponse: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension AiProxy_V1_GetTokenStatsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetTokenStatsRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}proxyId\0\u{1}fromTs\0\u{1}toTs\0")
+  public static let protoMessageName: String = _protobuf_package + ".GetTokenStatsRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}proxyId\0\u{1}fromTs\0\u{1}toTs\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2237,7 +2237,7 @@ extension AiProxy_V1_GetTokenStatsRequest: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.proxyID.isEmpty {
       try visitor.visitSingularStringField(value: self.proxyID, fieldNumber: 1)
     }
@@ -2250,7 +2250,7 @@ extension AiProxy_V1_GetTokenStatsRequest: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_GetTokenStatsRequest, rhs: AiProxy_V1_GetTokenStatsRequest) -> Bool {
+  public static func ==(lhs: AiProxy_V1_GetTokenStatsRequest, rhs: AiProxy_V1_GetTokenStatsRequest) -> Bool {
     if lhs.proxyID != rhs.proxyID {return false}
     if lhs.fromTs != rhs.fromTs {return false}
     if lhs.toTs != rhs.toTs {return false}
@@ -2260,10 +2260,10 @@ extension AiProxy_V1_GetTokenStatsRequest: SwiftProtobuf.Message, SwiftProtobuf.
 }
 
 extension AiProxy_V1_TokenStatsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TokenStatsResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}totalInputTokens\0\u{1}totalOutputTokens\0\u{1}totalTokens\0\u{1}requestCount\0")
+  public static let protoMessageName: String = _protobuf_package + ".TokenStatsResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}totalInputTokens\0\u{1}totalOutputTokens\0\u{1}totalTokens\0\u{1}requestCount\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2278,7 +2278,7 @@ extension AiProxy_V1_TokenStatsResponse: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.totalInputTokens != 0 {
       try visitor.visitSingularInt64Field(value: self.totalInputTokens, fieldNumber: 1)
     }
@@ -2294,7 +2294,7 @@ extension AiProxy_V1_TokenStatsResponse: SwiftProtobuf.Message, SwiftProtobuf._M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: AiProxy_V1_TokenStatsResponse, rhs: AiProxy_V1_TokenStatsResponse) -> Bool {
+  public static func ==(lhs: AiProxy_V1_TokenStatsResponse, rhs: AiProxy_V1_TokenStatsResponse) -> Bool {
     if lhs.totalInputTokens != rhs.totalInputTokens {return false}
     if lhs.totalOutputTokens != rhs.totalOutputTokens {return false}
     if lhs.totalTokens != rhs.totalTokens {return false}

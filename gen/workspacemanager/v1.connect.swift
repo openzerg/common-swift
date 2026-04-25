@@ -9,118 +9,206 @@ import Connect
 import Foundation
 import SwiftProtobuf
 
-internal protocol Workspacemanager_V1_WorkspaceManagerServiceClientInterface: Sendable {
+public protocol Workspacemanager_V1_WorkspaceManagerServiceClientInterface: Sendable {
+
+    @discardableResult
+    func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_HealthResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers) async -> ResponseMessage<Workspacemanager_V1_HealthResponse>
 
+    @discardableResult
+    func `createWorkspace`(request: Workspacemanager_V1_CreateWorkspaceRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_CreateWorkspaceResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `createWorkspace`(request: Workspacemanager_V1_CreateWorkspaceRequest, headers: Connect.Headers) async -> ResponseMessage<Workspacemanager_V1_CreateWorkspaceResponse>
+
+    @discardableResult
+    func `listWorkspaces`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_ListWorkspacesResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `listWorkspaces`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers) async -> ResponseMessage<Workspacemanager_V1_ListWorkspacesResponse>
 
+    @discardableResult
+    func `getWorkspace`(request: Workspacemanager_V1_GetWorkspaceRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_WmWorkspaceInfo>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `getWorkspace`(request: Workspacemanager_V1_GetWorkspaceRequest, headers: Connect.Headers) async -> ResponseMessage<Workspacemanager_V1_WmWorkspaceInfo>
+
+    @discardableResult
+    func `deleteWorkspace`(request: Workspacemanager_V1_DeleteWorkspaceRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_DeleteWorkspaceResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `deleteWorkspace`(request: Workspacemanager_V1_DeleteWorkspaceRequest, headers: Connect.Headers) async -> ResponseMessage<Workspacemanager_V1_DeleteWorkspaceResponse>
 
+    @discardableResult
+    func `startWorker`(request: Workspacemanager_V1_StartWorkerRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_StartWorkerResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `startWorker`(request: Workspacemanager_V1_StartWorkerRequest, headers: Connect.Headers) async -> ResponseMessage<Workspacemanager_V1_StartWorkerResponse>
+
+    @discardableResult
+    func `stopWorker`(request: Workspacemanager_V1_StopWorkerRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_StopWorkerResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `stopWorker`(request: Workspacemanager_V1_StopWorkerRequest, headers: Connect.Headers) async -> ResponseMessage<Workspacemanager_V1_StopWorkerResponse>
 
+    @discardableResult
+    func `getWorkerStatus`(request: Workspacemanager_V1_GetWorkerStatusRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_GetWorkerStatusResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `getWorkerStatus`(request: Workspacemanager_V1_GetWorkerStatusRequest, headers: Connect.Headers) async -> ResponseMessage<Workspacemanager_V1_GetWorkerStatusResponse>
+
+    @discardableResult
+    func `listWorkers`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_ListWorkersResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `listWorkers`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers) async -> ResponseMessage<Workspacemanager_V1_ListWorkersResponse>
 
+    @discardableResult
+    func `ensureWorkspaceWorker`(request: Workspacemanager_V1_EnsureWorkspaceWorkerRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_EnsureWorkspaceWorkerResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `ensureWorkspaceWorker`(request: Workspacemanager_V1_EnsureWorkspaceWorkerRequest, headers: Connect.Headers) async -> ResponseMessage<Workspacemanager_V1_EnsureWorkspaceWorkerResponse>
+
+    @discardableResult
+    func `updateWorkspaceConfig`(request: Workspacemanager_V1_UpdateWorkspaceConfigRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_UpdateWorkspaceConfigResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `updateWorkspaceConfig`(request: Workspacemanager_V1_UpdateWorkspaceConfigRequest, headers: Connect.Headers) async -> ResponseMessage<Workspacemanager_V1_UpdateWorkspaceConfigResponse>
 }
 
 /// Concrete implementation of `Workspacemanager_V1_WorkspaceManagerServiceClientInterface`.
-internal final class Workspacemanager_V1_WorkspaceManagerServiceClient: Workspacemanager_V1_WorkspaceManagerServiceClientInterface, Sendable {
+public final class Workspacemanager_V1_WorkspaceManagerServiceClient: Workspacemanager_V1_WorkspaceManagerServiceClientInterface, Sendable {
     private let client: Connect.ProtocolClientInterface
 
-    internal init(client: Connect.ProtocolClientInterface) {
+    public init(client: Connect.ProtocolClientInterface) {
         self.client = client
     }
 
+    @discardableResult
+    public func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_HealthResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/Health", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_HealthResponse> {
+    public func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_HealthResponse> {
         return await self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/Health", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `createWorkspace`(request: Workspacemanager_V1_CreateWorkspaceRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_CreateWorkspaceResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/CreateWorkspace", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `createWorkspace`(request: Workspacemanager_V1_CreateWorkspaceRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_CreateWorkspaceResponse> {
+    public func `createWorkspace`(request: Workspacemanager_V1_CreateWorkspaceRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_CreateWorkspaceResponse> {
         return await self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/CreateWorkspace", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `listWorkspaces`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_ListWorkspacesResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/ListWorkspaces", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `listWorkspaces`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_ListWorkspacesResponse> {
+    public func `listWorkspaces`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_ListWorkspacesResponse> {
         return await self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/ListWorkspaces", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `getWorkspace`(request: Workspacemanager_V1_GetWorkspaceRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_WmWorkspaceInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/GetWorkspace", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `getWorkspace`(request: Workspacemanager_V1_GetWorkspaceRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_WmWorkspaceInfo> {
+    public func `getWorkspace`(request: Workspacemanager_V1_GetWorkspaceRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_WmWorkspaceInfo> {
         return await self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/GetWorkspace", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `deleteWorkspace`(request: Workspacemanager_V1_DeleteWorkspaceRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_DeleteWorkspaceResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/DeleteWorkspace", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `deleteWorkspace`(request: Workspacemanager_V1_DeleteWorkspaceRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_DeleteWorkspaceResponse> {
+    public func `deleteWorkspace`(request: Workspacemanager_V1_DeleteWorkspaceRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_DeleteWorkspaceResponse> {
         return await self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/DeleteWorkspace", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `startWorker`(request: Workspacemanager_V1_StartWorkerRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_StartWorkerResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/StartWorker", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `startWorker`(request: Workspacemanager_V1_StartWorkerRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_StartWorkerResponse> {
+    public func `startWorker`(request: Workspacemanager_V1_StartWorkerRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_StartWorkerResponse> {
         return await self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/StartWorker", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `stopWorker`(request: Workspacemanager_V1_StopWorkerRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_StopWorkerResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/StopWorker", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `stopWorker`(request: Workspacemanager_V1_StopWorkerRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_StopWorkerResponse> {
+    public func `stopWorker`(request: Workspacemanager_V1_StopWorkerRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_StopWorkerResponse> {
         return await self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/StopWorker", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `getWorkerStatus`(request: Workspacemanager_V1_GetWorkerStatusRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_GetWorkerStatusResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/GetWorkerStatus", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `getWorkerStatus`(request: Workspacemanager_V1_GetWorkerStatusRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_GetWorkerStatusResponse> {
+    public func `getWorkerStatus`(request: Workspacemanager_V1_GetWorkerStatusRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_GetWorkerStatusResponse> {
         return await self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/GetWorkerStatus", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `listWorkers`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_ListWorkersResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/ListWorkers", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `listWorkers`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_ListWorkersResponse> {
+    public func `listWorkers`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_ListWorkersResponse> {
         return await self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/ListWorkers", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `ensureWorkspaceWorker`(request: Workspacemanager_V1_EnsureWorkspaceWorkerRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_EnsureWorkspaceWorkerResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/EnsureWorkspaceWorker", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `ensureWorkspaceWorker`(request: Workspacemanager_V1_EnsureWorkspaceWorkerRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_EnsureWorkspaceWorkerResponse> {
+    public func `ensureWorkspaceWorker`(request: Workspacemanager_V1_EnsureWorkspaceWorkerRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_EnsureWorkspaceWorkerResponse> {
         return await self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/EnsureWorkspaceWorker", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `updateWorkspaceConfig`(request: Workspacemanager_V1_UpdateWorkspaceConfigRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Workspacemanager_V1_UpdateWorkspaceConfigResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/UpdateWorkspaceConfig", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `updateWorkspaceConfig`(request: Workspacemanager_V1_UpdateWorkspaceConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_UpdateWorkspaceConfigResponse> {
+    public func `updateWorkspaceConfig`(request: Workspacemanager_V1_UpdateWorkspaceConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Workspacemanager_V1_UpdateWorkspaceConfigResponse> {
         return await self.client.unary(path: "/workspacemanager.v1.WorkspaceManagerService/UpdateWorkspaceConfig", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
-    internal enum Metadata {
-        internal enum Methods {
-            internal static let health = Connect.MethodSpec(name: "Health", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
-            internal static let createWorkspace = Connect.MethodSpec(name: "CreateWorkspace", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
-            internal static let listWorkspaces = Connect.MethodSpec(name: "ListWorkspaces", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
-            internal static let getWorkspace = Connect.MethodSpec(name: "GetWorkspace", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
-            internal static let deleteWorkspace = Connect.MethodSpec(name: "DeleteWorkspace", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
-            internal static let startWorker = Connect.MethodSpec(name: "StartWorker", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
-            internal static let stopWorker = Connect.MethodSpec(name: "StopWorker", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
-            internal static let getWorkerStatus = Connect.MethodSpec(name: "GetWorkerStatus", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
-            internal static let listWorkers = Connect.MethodSpec(name: "ListWorkers", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
-            internal static let ensureWorkspaceWorker = Connect.MethodSpec(name: "EnsureWorkspaceWorker", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
-            internal static let updateWorkspaceConfig = Connect.MethodSpec(name: "UpdateWorkspaceConfig", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
+    public enum Metadata {
+        public enum Methods {
+            public static let health = Connect.MethodSpec(name: "Health", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
+            public static let createWorkspace = Connect.MethodSpec(name: "CreateWorkspace", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
+            public static let listWorkspaces = Connect.MethodSpec(name: "ListWorkspaces", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
+            public static let getWorkspace = Connect.MethodSpec(name: "GetWorkspace", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
+            public static let deleteWorkspace = Connect.MethodSpec(name: "DeleteWorkspace", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
+            public static let startWorker = Connect.MethodSpec(name: "StartWorker", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
+            public static let stopWorker = Connect.MethodSpec(name: "StopWorker", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
+            public static let getWorkerStatus = Connect.MethodSpec(name: "GetWorkerStatus", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
+            public static let listWorkers = Connect.MethodSpec(name: "ListWorkers", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
+            public static let ensureWorkspaceWorker = Connect.MethodSpec(name: "EnsureWorkspaceWorker", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
+            public static let updateWorkspaceConfig = Connect.MethodSpec(name: "UpdateWorkspaceConfig", service: "workspacemanager.v1.WorkspaceManagerService", type: .unary)
         }
     }
 }

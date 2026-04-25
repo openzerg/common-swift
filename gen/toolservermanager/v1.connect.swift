@@ -9,82 +9,138 @@ import Connect
 import Foundation
 import SwiftProtobuf
 
-internal protocol Toolservermanager_V1_ToolServerManagerServiceClientInterface: Sendable {
+public protocol Toolservermanager_V1_ToolServerManagerServiceClientInterface: Sendable {
+
+    @discardableResult
+    func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_HealthResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers) async -> ResponseMessage<Toolservermanager_V1_HealthResponse>
 
+    @discardableResult
+    func `startToolServer`(request: Toolservermanager_V1_StartToolServerRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_StartToolServerResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `startToolServer`(request: Toolservermanager_V1_StartToolServerRequest, headers: Connect.Headers) async -> ResponseMessage<Toolservermanager_V1_StartToolServerResponse>
+
+    @discardableResult
+    func `stopToolServer`(request: Toolservermanager_V1_StopToolServerRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_StopToolServerResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `stopToolServer`(request: Toolservermanager_V1_StopToolServerRequest, headers: Connect.Headers) async -> ResponseMessage<Toolservermanager_V1_StopToolServerResponse>
 
+    @discardableResult
+    func `listToolServers`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_ListToolServersResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `listToolServers`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers) async -> ResponseMessage<Toolservermanager_V1_ListToolServersResponse>
+
+    @discardableResult
+    func `refreshToolCache`(request: Toolservermanager_V1_RefreshToolCacheRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_RefreshToolCacheResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `refreshToolCache`(request: Toolservermanager_V1_RefreshToolCacheRequest, headers: Connect.Headers) async -> ResponseMessage<Toolservermanager_V1_RefreshToolCacheResponse>
 
+    @discardableResult
+    func `resolveTools`(request: Toolservermanager_V1_ResolveToolsRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_ResolveToolsResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `resolveTools`(request: Toolservermanager_V1_ResolveToolsRequest, headers: Connect.Headers) async -> ResponseMessage<Toolservermanager_V1_ResolveToolsResponse>
+
+    @discardableResult
+    func `executeTool`(request: Toolservermanager_V1_ExecuteToolRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_ExecuteToolResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `executeTool`(request: Toolservermanager_V1_ExecuteToolRequest, headers: Connect.Headers) async -> ResponseMessage<Toolservermanager_V1_ExecuteToolResponse>
 }
 
 /// Concrete implementation of `Toolservermanager_V1_ToolServerManagerServiceClientInterface`.
-internal final class Toolservermanager_V1_ToolServerManagerServiceClient: Toolservermanager_V1_ToolServerManagerServiceClientInterface, Sendable {
+public final class Toolservermanager_V1_ToolServerManagerServiceClient: Toolservermanager_V1_ToolServerManagerServiceClientInterface, Sendable {
     private let client: Connect.ProtocolClientInterface
 
-    internal init(client: Connect.ProtocolClientInterface) {
+    public init(client: Connect.ProtocolClientInterface) {
         self.client = client
     }
 
+    @discardableResult
+    public func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_HealthResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/Health", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_HealthResponse> {
+    public func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_HealthResponse> {
         return await self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/Health", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `startToolServer`(request: Toolservermanager_V1_StartToolServerRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_StartToolServerResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/StartToolServer", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `startToolServer`(request: Toolservermanager_V1_StartToolServerRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_StartToolServerResponse> {
+    public func `startToolServer`(request: Toolservermanager_V1_StartToolServerRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_StartToolServerResponse> {
         return await self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/StartToolServer", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `stopToolServer`(request: Toolservermanager_V1_StopToolServerRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_StopToolServerResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/StopToolServer", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `stopToolServer`(request: Toolservermanager_V1_StopToolServerRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_StopToolServerResponse> {
+    public func `stopToolServer`(request: Toolservermanager_V1_StopToolServerRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_StopToolServerResponse> {
         return await self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/StopToolServer", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `listToolServers`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_ListToolServersResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/ListToolServers", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `listToolServers`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_ListToolServersResponse> {
+    public func `listToolServers`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_ListToolServersResponse> {
         return await self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/ListToolServers", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `refreshToolCache`(request: Toolservermanager_V1_RefreshToolCacheRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_RefreshToolCacheResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/RefreshToolCache", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `refreshToolCache`(request: Toolservermanager_V1_RefreshToolCacheRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_RefreshToolCacheResponse> {
+    public func `refreshToolCache`(request: Toolservermanager_V1_RefreshToolCacheRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_RefreshToolCacheResponse> {
         return await self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/RefreshToolCache", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `resolveTools`(request: Toolservermanager_V1_ResolveToolsRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_ResolveToolsResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/ResolveTools", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `resolveTools`(request: Toolservermanager_V1_ResolveToolsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_ResolveToolsResponse> {
+    public func `resolveTools`(request: Toolservermanager_V1_ResolveToolsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_ResolveToolsResponse> {
         return await self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/ResolveTools", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `executeTool`(request: Toolservermanager_V1_ExecuteToolRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Toolservermanager_V1_ExecuteToolResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/ExecuteTool", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `executeTool`(request: Toolservermanager_V1_ExecuteToolRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_ExecuteToolResponse> {
+    public func `executeTool`(request: Toolservermanager_V1_ExecuteToolRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Toolservermanager_V1_ExecuteToolResponse> {
         return await self.client.unary(path: "/toolservermanager.v1.ToolServerManagerService/ExecuteTool", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
-    internal enum Metadata {
-        internal enum Methods {
-            internal static let health = Connect.MethodSpec(name: "Health", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
-            internal static let startToolServer = Connect.MethodSpec(name: "StartToolServer", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
-            internal static let stopToolServer = Connect.MethodSpec(name: "StopToolServer", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
-            internal static let listToolServers = Connect.MethodSpec(name: "ListToolServers", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
-            internal static let refreshToolCache = Connect.MethodSpec(name: "RefreshToolCache", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
-            internal static let resolveTools = Connect.MethodSpec(name: "ResolveTools", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
-            internal static let executeTool = Connect.MethodSpec(name: "ExecuteTool", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
+    public enum Metadata {
+        public enum Methods {
+            public static let health = Connect.MethodSpec(name: "Health", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
+            public static let startToolServer = Connect.MethodSpec(name: "StartToolServer", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
+            public static let stopToolServer = Connect.MethodSpec(name: "StopToolServer", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
+            public static let listToolServers = Connect.MethodSpec(name: "ListToolServers", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
+            public static let refreshToolCache = Connect.MethodSpec(name: "RefreshToolCache", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
+            public static let resolveTools = Connect.MethodSpec(name: "ResolveTools", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
+            public static let executeTool = Connect.MethodSpec(name: "ExecuteTool", service: "toolservermanager.v1.ToolServerManagerService", type: .unary)
         }
     }
 }

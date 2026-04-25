@@ -9,64 +9,102 @@ import Connect
 import Foundation
 import SwiftProtobuf
 
-internal protocol Agent_V1_AgentServiceClientInterface: Sendable {
+public protocol Agent_V1_AgentServiceClientInterface: Sendable {
+
+    @discardableResult
+    func `chat`(request: Agent_V1_ChatRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Agent_V1_ChatResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `chat`(request: Agent_V1_ChatRequest, headers: Connect.Headers) async -> ResponseMessage<Agent_V1_ChatResponse>
 
+    @discardableResult
+    func `interrupt`(request: Agent_V1_InterruptRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Agent_V1_InterruptResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `interrupt`(request: Agent_V1_InterruptRequest, headers: Connect.Headers) async -> ResponseMessage<Agent_V1_InterruptResponse>
+
+    @discardableResult
+    func `deleteMessagesFrom`(request: Agent_V1_DeleteMessagesFromRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Agent_V1_DeleteMessagesFromResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `deleteMessagesFrom`(request: Agent_V1_DeleteMessagesFromRequest, headers: Connect.Headers) async -> ResponseMessage<Agent_V1_DeleteMessagesFromResponse>
 
+    func `subscribeSessionEvents`(headers: Connect.Headers, onResult: @escaping @Sendable (Connect.StreamResult<Agent_V1_SessionEvent>) -> Void) -> any Connect.ServerOnlyStreamInterface<Agent_V1_SubscribeEventsRequest>
+
     @available(iOS 13, *)
     func `subscribeSessionEvents`(headers: Connect.Headers) -> any Connect.ServerOnlyAsyncStreamInterface<Agent_V1_SubscribeEventsRequest, Agent_V1_SessionEvent>
+
+    @discardableResult
+    func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Agent_V1_HealthResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers) async -> ResponseMessage<Agent_V1_HealthResponse>
 }
 
 /// Concrete implementation of `Agent_V1_AgentServiceClientInterface`.
-internal final class Agent_V1_AgentServiceClient: Agent_V1_AgentServiceClientInterface, Sendable {
+public final class Agent_V1_AgentServiceClient: Agent_V1_AgentServiceClientInterface, Sendable {
     private let client: Connect.ProtocolClientInterface
 
-    internal init(client: Connect.ProtocolClientInterface) {
+    public init(client: Connect.ProtocolClientInterface) {
         self.client = client
     }
 
+    @discardableResult
+    public func `chat`(request: Agent_V1_ChatRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Agent_V1_ChatResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/agent.v1.AgentService/Chat", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `chat`(request: Agent_V1_ChatRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Agent_V1_ChatResponse> {
+    public func `chat`(request: Agent_V1_ChatRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Agent_V1_ChatResponse> {
         return await self.client.unary(path: "/agent.v1.AgentService/Chat", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `interrupt`(request: Agent_V1_InterruptRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Agent_V1_InterruptResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/agent.v1.AgentService/Interrupt", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `interrupt`(request: Agent_V1_InterruptRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Agent_V1_InterruptResponse> {
+    public func `interrupt`(request: Agent_V1_InterruptRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Agent_V1_InterruptResponse> {
         return await self.client.unary(path: "/agent.v1.AgentService/Interrupt", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `deleteMessagesFrom`(request: Agent_V1_DeleteMessagesFromRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Agent_V1_DeleteMessagesFromResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/agent.v1.AgentService/DeleteMessagesFrom", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `deleteMessagesFrom`(request: Agent_V1_DeleteMessagesFromRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Agent_V1_DeleteMessagesFromResponse> {
+    public func `deleteMessagesFrom`(request: Agent_V1_DeleteMessagesFromRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Agent_V1_DeleteMessagesFromResponse> {
         return await self.client.unary(path: "/agent.v1.AgentService/DeleteMessagesFrom", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    public func `subscribeSessionEvents`(headers: Connect.Headers = [:], onResult: @escaping @Sendable (Connect.StreamResult<Agent_V1_SessionEvent>) -> Void) -> any Connect.ServerOnlyStreamInterface<Agent_V1_SubscribeEventsRequest> {
+        return self.client.serverOnlyStream(path: "/agent.v1.AgentService/SubscribeSessionEvents", headers: headers, onResult: onResult)
+    }
+
     @available(iOS 13, *)
-    internal func `subscribeSessionEvents`(headers: Connect.Headers = [:]) -> any Connect.ServerOnlyAsyncStreamInterface<Agent_V1_SubscribeEventsRequest, Agent_V1_SessionEvent> {
+    public func `subscribeSessionEvents`(headers: Connect.Headers = [:]) -> any Connect.ServerOnlyAsyncStreamInterface<Agent_V1_SubscribeEventsRequest, Agent_V1_SessionEvent> {
         return self.client.serverOnlyStream(path: "/agent.v1.AgentService/SubscribeSessionEvents", headers: headers)
     }
 
+    @discardableResult
+    public func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Agent_V1_HealthResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/agent.v1.AgentService/Health", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Agent_V1_HealthResponse> {
+    public func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Agent_V1_HealthResponse> {
         return await self.client.unary(path: "/agent.v1.AgentService/Health", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
-    internal enum Metadata {
-        internal enum Methods {
-            internal static let chat = Connect.MethodSpec(name: "Chat", service: "agent.v1.AgentService", type: .unary)
-            internal static let interrupt = Connect.MethodSpec(name: "Interrupt", service: "agent.v1.AgentService", type: .unary)
-            internal static let deleteMessagesFrom = Connect.MethodSpec(name: "DeleteMessagesFrom", service: "agent.v1.AgentService", type: .unary)
-            internal static let subscribeSessionEvents = Connect.MethodSpec(name: "SubscribeSessionEvents", service: "agent.v1.AgentService", type: .serverStream)
-            internal static let health = Connect.MethodSpec(name: "Health", service: "agent.v1.AgentService", type: .unary)
+    public enum Metadata {
+        public enum Methods {
+            public static let chat = Connect.MethodSpec(name: "Chat", service: "agent.v1.AgentService", type: .unary)
+            public static let interrupt = Connect.MethodSpec(name: "Interrupt", service: "agent.v1.AgentService", type: .unary)
+            public static let deleteMessagesFrom = Connect.MethodSpec(name: "DeleteMessagesFrom", service: "agent.v1.AgentService", type: .unary)
+            public static let subscribeSessionEvents = Connect.MethodSpec(name: "SubscribeSessionEvents", service: "agent.v1.AgentService", type: .serverStream)
+            public static let health = Connect.MethodSpec(name: "Health", service: "agent.v1.AgentService", type: .unary)
         }
     }
 }

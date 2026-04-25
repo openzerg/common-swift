@@ -32,208 +32,208 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Worker_V1_ExecRequest: Sendable {
+public struct Worker_V1_ExecRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var command: String = String()
+  public var command: String = String()
 
-  var workdir: String = String()
+  public var workdir: String = String()
 
-  var env: Dictionary<String,String> = [:]
+  public var env: Dictionary<String,String> = [:]
 
-  var timeoutMs: Int32 = 0
+  public var timeoutMs: Int32 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Worker_V1_ExecResponse: Sendable {
+public struct Worker_V1_ExecResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var exitCode: Int32 = 0
+  public var exitCode: Int32 = 0
 
-  var stdout: Data = Data()
+  public var stdout: Data = Data()
 
-  var stderr: Data = Data()
+  public var stderr: Data = Data()
 
-  var timedOut: Bool = false
+  public var timedOut: Bool = false
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Worker_V1_SpawnRequest: Sendable {
+public struct Worker_V1_SpawnRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var jobID: String = String()
+  public var jobID: String = String()
 
-  var command: String = String()
+  public var command: String = String()
 
-  var workdir: String = String()
+  public var workdir: String = String()
 
-  var env: Dictionary<String,String> = [:]
+  public var env: Dictionary<String,String> = [:]
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Worker_V1_SpawnResponse: Sendable {
+public struct Worker_V1_SpawnResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var started: Bool = false
+  public var started: Bool = false
 
-  var error: String = String()
+  public var error: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Worker_V1_ReadFileRequest: Sendable {
+public struct Worker_V1_ReadFileRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var path: String = String()
+  public var path: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Worker_V1_ReadFileResponse: Sendable {
+public struct Worker_V1_ReadFileResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var content: Data = Data()
+  public var content: Data = Data()
 
-  var mtimeMs: Int64 = 0
+  public var mtimeMs: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Worker_V1_WriteFileRequest: Sendable {
+public struct Worker_V1_WriteFileRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var path: String = String()
+  public var path: String = String()
 
-  var content: Data = Data()
+  public var content: Data = Data()
 
-  var expectedMtimeMs: Int64 = 0
+  public var expectedMtimeMs: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Worker_V1_WriteFileResponse: Sendable {
+public struct Worker_V1_WriteFileResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var actualMtimeMs: Int64 = 0
+  public var actualMtimeMs: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Worker_V1_StatRequest: Sendable {
+public struct Worker_V1_StatRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var path: String = String()
+  public var path: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Worker_V1_StatResponse: Sendable {
+public struct Worker_V1_StatResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var exists: Bool = false
+  public var exists: Bool = false
 
-  var isFile: Bool = false
+  public var isFile: Bool = false
 
-  var isDir: Bool = false
+  public var isDir: Bool = false
 
-  var size: Int64 = 0
+  public var size: Int64 = 0
 
-  var mtimeMs: Int64 = 0
+  public var mtimeMs: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Worker_V1_InstallPackagesRequest: Sendable {
+public struct Worker_V1_InstallPackagesRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var packages: [String] = []
+  public var packages: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Worker_V1_InstallPackagesResponse: Sendable {
+public struct Worker_V1_InstallPackagesResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var installed: [String] = []
+  public var installed: [String] = []
 
-  var failed: [String] = []
+  public var failed: [String] = []
 
-  var envShPath: String = String()
+  public var envShPath: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Worker_V1_HealthRequest: Sendable {
+public struct Worker_V1_HealthRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Worker_V1_HealthResponse: Sendable {
+public struct Worker_V1_HealthResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var status: String = String()
+  public var status: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -241,10 +241,10 @@ struct Worker_V1_HealthResponse: Sendable {
 fileprivate let _protobuf_package = "worker.v1"
 
 extension Worker_V1_ExecRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ExecRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}command\0\u{1}workdir\0\u{1}env\0\u{1}timeoutMs\0")
+  public static let protoMessageName: String = _protobuf_package + ".ExecRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}command\0\u{1}workdir\0\u{1}env\0\u{1}timeoutMs\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -259,7 +259,7 @@ extension Worker_V1_ExecRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.command.isEmpty {
       try visitor.visitSingularStringField(value: self.command, fieldNumber: 1)
     }
@@ -275,7 +275,7 @@ extension Worker_V1_ExecRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_ExecRequest, rhs: Worker_V1_ExecRequest) -> Bool {
+  public static func ==(lhs: Worker_V1_ExecRequest, rhs: Worker_V1_ExecRequest) -> Bool {
     if lhs.command != rhs.command {return false}
     if lhs.workdir != rhs.workdir {return false}
     if lhs.env != rhs.env {return false}
@@ -286,10 +286,10 @@ extension Worker_V1_ExecRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
 }
 
 extension Worker_V1_ExecResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ExecResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}exitCode\0\u{1}stdout\0\u{1}stderr\0\u{1}timedOut\0")
+  public static let protoMessageName: String = _protobuf_package + ".ExecResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}exitCode\0\u{1}stdout\0\u{1}stderr\0\u{1}timedOut\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -304,7 +304,7 @@ extension Worker_V1_ExecResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.exitCode != 0 {
       try visitor.visitSingularInt32Field(value: self.exitCode, fieldNumber: 1)
     }
@@ -320,7 +320,7 @@ extension Worker_V1_ExecResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_ExecResponse, rhs: Worker_V1_ExecResponse) -> Bool {
+  public static func ==(lhs: Worker_V1_ExecResponse, rhs: Worker_V1_ExecResponse) -> Bool {
     if lhs.exitCode != rhs.exitCode {return false}
     if lhs.stdout != rhs.stdout {return false}
     if lhs.stderr != rhs.stderr {return false}
@@ -331,10 +331,10 @@ extension Worker_V1_ExecResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageI
 }
 
 extension Worker_V1_SpawnRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SpawnRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}jobId\0\u{1}command\0\u{1}workdir\0\u{1}env\0")
+  public static let protoMessageName: String = _protobuf_package + ".SpawnRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}jobId\0\u{1}command\0\u{1}workdir\0\u{1}env\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -349,7 +349,7 @@ extension Worker_V1_SpawnRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.jobID.isEmpty {
       try visitor.visitSingularStringField(value: self.jobID, fieldNumber: 1)
     }
@@ -365,7 +365,7 @@ extension Worker_V1_SpawnRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_SpawnRequest, rhs: Worker_V1_SpawnRequest) -> Bool {
+  public static func ==(lhs: Worker_V1_SpawnRequest, rhs: Worker_V1_SpawnRequest) -> Bool {
     if lhs.jobID != rhs.jobID {return false}
     if lhs.command != rhs.command {return false}
     if lhs.workdir != rhs.workdir {return false}
@@ -376,10 +376,10 @@ extension Worker_V1_SpawnRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageI
 }
 
 extension Worker_V1_SpawnResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SpawnResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}started\0\u{1}error\0")
+  public static let protoMessageName: String = _protobuf_package + ".SpawnResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}started\0\u{1}error\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -392,7 +392,7 @@ extension Worker_V1_SpawnResponse: SwiftProtobuf.Message, SwiftProtobuf._Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.started != false {
       try visitor.visitSingularBoolField(value: self.started, fieldNumber: 1)
     }
@@ -402,7 +402,7 @@ extension Worker_V1_SpawnResponse: SwiftProtobuf.Message, SwiftProtobuf._Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_SpawnResponse, rhs: Worker_V1_SpawnResponse) -> Bool {
+  public static func ==(lhs: Worker_V1_SpawnResponse, rhs: Worker_V1_SpawnResponse) -> Bool {
     if lhs.started != rhs.started {return false}
     if lhs.error != rhs.error {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -411,10 +411,10 @@ extension Worker_V1_SpawnResponse: SwiftProtobuf.Message, SwiftProtobuf._Message
 }
 
 extension Worker_V1_ReadFileRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ReadFileRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}path\0")
+  public static let protoMessageName: String = _protobuf_package + ".ReadFileRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}path\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -426,14 +426,14 @@ extension Worker_V1_ReadFileRequest: SwiftProtobuf.Message, SwiftProtobuf._Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.path.isEmpty {
       try visitor.visitSingularStringField(value: self.path, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_ReadFileRequest, rhs: Worker_V1_ReadFileRequest) -> Bool {
+  public static func ==(lhs: Worker_V1_ReadFileRequest, rhs: Worker_V1_ReadFileRequest) -> Bool {
     if lhs.path != rhs.path {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -441,10 +441,10 @@ extension Worker_V1_ReadFileRequest: SwiftProtobuf.Message, SwiftProtobuf._Messa
 }
 
 extension Worker_V1_ReadFileResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ReadFileResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}content\0\u{1}mtimeMs\0")
+  public static let protoMessageName: String = _protobuf_package + ".ReadFileResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}content\0\u{1}mtimeMs\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -457,7 +457,7 @@ extension Worker_V1_ReadFileResponse: SwiftProtobuf.Message, SwiftProtobuf._Mess
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.content.isEmpty {
       try visitor.visitSingularBytesField(value: self.content, fieldNumber: 1)
     }
@@ -467,7 +467,7 @@ extension Worker_V1_ReadFileResponse: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_ReadFileResponse, rhs: Worker_V1_ReadFileResponse) -> Bool {
+  public static func ==(lhs: Worker_V1_ReadFileResponse, rhs: Worker_V1_ReadFileResponse) -> Bool {
     if lhs.content != rhs.content {return false}
     if lhs.mtimeMs != rhs.mtimeMs {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -476,10 +476,10 @@ extension Worker_V1_ReadFileResponse: SwiftProtobuf.Message, SwiftProtobuf._Mess
 }
 
 extension Worker_V1_WriteFileRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".WriteFileRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}path\0\u{1}content\0\u{1}expectedMtimeMs\0")
+  public static let protoMessageName: String = _protobuf_package + ".WriteFileRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}path\0\u{1}content\0\u{1}expectedMtimeMs\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -493,7 +493,7 @@ extension Worker_V1_WriteFileRequest: SwiftProtobuf.Message, SwiftProtobuf._Mess
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.path.isEmpty {
       try visitor.visitSingularStringField(value: self.path, fieldNumber: 1)
     }
@@ -506,7 +506,7 @@ extension Worker_V1_WriteFileRequest: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_WriteFileRequest, rhs: Worker_V1_WriteFileRequest) -> Bool {
+  public static func ==(lhs: Worker_V1_WriteFileRequest, rhs: Worker_V1_WriteFileRequest) -> Bool {
     if lhs.path != rhs.path {return false}
     if lhs.content != rhs.content {return false}
     if lhs.expectedMtimeMs != rhs.expectedMtimeMs {return false}
@@ -516,10 +516,10 @@ extension Worker_V1_WriteFileRequest: SwiftProtobuf.Message, SwiftProtobuf._Mess
 }
 
 extension Worker_V1_WriteFileResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".WriteFileResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}actualMtimeMs\0")
+  public static let protoMessageName: String = _protobuf_package + ".WriteFileResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}actualMtimeMs\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -531,14 +531,14 @@ extension Worker_V1_WriteFileResponse: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.actualMtimeMs != 0 {
       try visitor.visitSingularInt64Field(value: self.actualMtimeMs, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_WriteFileResponse, rhs: Worker_V1_WriteFileResponse) -> Bool {
+  public static func ==(lhs: Worker_V1_WriteFileResponse, rhs: Worker_V1_WriteFileResponse) -> Bool {
     if lhs.actualMtimeMs != rhs.actualMtimeMs {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -546,10 +546,10 @@ extension Worker_V1_WriteFileResponse: SwiftProtobuf.Message, SwiftProtobuf._Mes
 }
 
 extension Worker_V1_StatRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".StatRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}path\0")
+  public static let protoMessageName: String = _protobuf_package + ".StatRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}path\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -561,14 +561,14 @@ extension Worker_V1_StatRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.path.isEmpty {
       try visitor.visitSingularStringField(value: self.path, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_StatRequest, rhs: Worker_V1_StatRequest) -> Bool {
+  public static func ==(lhs: Worker_V1_StatRequest, rhs: Worker_V1_StatRequest) -> Bool {
     if lhs.path != rhs.path {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -576,10 +576,10 @@ extension Worker_V1_StatRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
 }
 
 extension Worker_V1_StatResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".StatResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}exists\0\u{1}isFile\0\u{1}isDir\0\u{1}size\0\u{1}mtimeMs\0")
+  public static let protoMessageName: String = _protobuf_package + ".StatResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}exists\0\u{1}isFile\0\u{1}isDir\0\u{1}size\0\u{1}mtimeMs\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -595,7 +595,7 @@ extension Worker_V1_StatResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.exists != false {
       try visitor.visitSingularBoolField(value: self.exists, fieldNumber: 1)
     }
@@ -614,7 +614,7 @@ extension Worker_V1_StatResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_StatResponse, rhs: Worker_V1_StatResponse) -> Bool {
+  public static func ==(lhs: Worker_V1_StatResponse, rhs: Worker_V1_StatResponse) -> Bool {
     if lhs.exists != rhs.exists {return false}
     if lhs.isFile != rhs.isFile {return false}
     if lhs.isDir != rhs.isDir {return false}
@@ -626,10 +626,10 @@ extension Worker_V1_StatResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageI
 }
 
 extension Worker_V1_InstallPackagesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".InstallPackagesRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}packages\0")
+  public static let protoMessageName: String = _protobuf_package + ".InstallPackagesRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}packages\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -641,14 +641,14 @@ extension Worker_V1_InstallPackagesRequest: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.packages.isEmpty {
       try visitor.visitRepeatedStringField(value: self.packages, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_InstallPackagesRequest, rhs: Worker_V1_InstallPackagesRequest) -> Bool {
+  public static func ==(lhs: Worker_V1_InstallPackagesRequest, rhs: Worker_V1_InstallPackagesRequest) -> Bool {
     if lhs.packages != rhs.packages {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -656,10 +656,10 @@ extension Worker_V1_InstallPackagesRequest: SwiftProtobuf.Message, SwiftProtobuf
 }
 
 extension Worker_V1_InstallPackagesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".InstallPackagesResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}installed\0\u{1}failed\0\u{1}envShPath\0")
+  public static let protoMessageName: String = _protobuf_package + ".InstallPackagesResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}installed\0\u{1}failed\0\u{1}envShPath\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -673,7 +673,7 @@ extension Worker_V1_InstallPackagesResponse: SwiftProtobuf.Message, SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.installed.isEmpty {
       try visitor.visitRepeatedStringField(value: self.installed, fieldNumber: 1)
     }
@@ -686,7 +686,7 @@ extension Worker_V1_InstallPackagesResponse: SwiftProtobuf.Message, SwiftProtobu
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_InstallPackagesResponse, rhs: Worker_V1_InstallPackagesResponse) -> Bool {
+  public static func ==(lhs: Worker_V1_InstallPackagesResponse, rhs: Worker_V1_InstallPackagesResponse) -> Bool {
     if lhs.installed != rhs.installed {return false}
     if lhs.failed != rhs.failed {return false}
     if lhs.envShPath != rhs.envShPath {return false}
@@ -696,29 +696,29 @@ extension Worker_V1_InstallPackagesResponse: SwiftProtobuf.Message, SwiftProtobu
 }
 
 extension Worker_V1_HealthRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".HealthRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".HealthRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     // Load everything into unknown fields
     while try decoder.nextFieldNumber() != nil {}
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_HealthRequest, rhs: Worker_V1_HealthRequest) -> Bool {
+  public static func ==(lhs: Worker_V1_HealthRequest, rhs: Worker_V1_HealthRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Worker_V1_HealthResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".HealthResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}status\0")
+  public static let protoMessageName: String = _protobuf_package + ".HealthResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}status\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -730,14 +730,14 @@ extension Worker_V1_HealthResponse: SwiftProtobuf.Message, SwiftProtobuf._Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.status.isEmpty {
       try visitor.visitSingularStringField(value: self.status, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Worker_V1_HealthResponse, rhs: Worker_V1_HealthResponse) -> Bool {
+  public static func ==(lhs: Worker_V1_HealthResponse, rhs: Worker_V1_HealthResponse) -> Bool {
     if lhs.status != rhs.status {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

@@ -22,348 +22,348 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Workspacemanager_V1_WmWorkspaceInfo: Sendable {
+public struct Workspacemanager_V1_WmWorkspaceInfo: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var workspaceID: String = String()
+  public var workspaceID: String = String()
 
-  var volumeName: String = String()
+  public var volumeName: String = String()
 
-  var state: String = String()
+  public var state: String = String()
 
-  var createdBySessionID: String = String()
+  public var createdBySessionID: String = String()
 
-  var createdAt: Int64 = 0
+  public var createdAt: Int64 = 0
 
-  var workerPodName: String = String()
+  public var workerPodName: String = String()
 
-  var skillSlugs: String = String()
+  public var skillSlugs: String = String()
 
-  var nixPkgs: String = String()
+  public var nixPkgs: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_WmWorkerInfo: Sendable {
+public struct Workspacemanager_V1_WmWorkerInfo: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var workerID: String = String()
+  public var workerID: String = String()
 
-  var sessionID: String = String()
+  public var sessionID: String = String()
 
-  var containerName: String = String()
+  public var containerName: String = String()
 
-  var image: String = String()
+  public var image: String = String()
 
-  var state: String = String()
+  public var state: String = String()
 
-  var podmanID: String = String()
+  public var podmanID: String = String()
 
-  var secret: String = String()
+  public var secret: String = String()
 
-  var workspaceRoot: String = String()
+  public var workspaceRoot: String = String()
 
-  var filesystemURL: String = String()
+  public var filesystemURL: String = String()
 
-  var executionURL: String = String()
+  public var executionURL: String = String()
 
-  var createdAt: Int64 = 0
+  public var createdAt: Int64 = 0
 
-  var workspaceID: String = String()
+  public var workspaceID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_ContainerVolume: Sendable {
+public struct Workspacemanager_V1_ContainerVolume: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var name: String = String()
+  public var name: String = String()
 
-  var destination: String = String()
+  public var destination: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_CreateWorkspaceRequest: Sendable {
+public struct Workspacemanager_V1_CreateWorkspaceRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var sessionID: String = String()
+  public var sessionID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_CreateWorkspaceResponse: Sendable {
+public struct Workspacemanager_V1_CreateWorkspaceResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var workspaceID: String = String()
+  public var workspaceID: String = String()
 
-  var volumeName: String = String()
+  public var volumeName: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_ListWorkspacesRequest: Sendable {
+public struct Workspacemanager_V1_ListWorkspacesRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_ListWorkspacesResponse: Sendable {
+public struct Workspacemanager_V1_ListWorkspacesResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var workspaces: [Workspacemanager_V1_WmWorkspaceInfo] = []
+  public var workspaces: [Workspacemanager_V1_WmWorkspaceInfo] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_GetWorkspaceRequest: Sendable {
+public struct Workspacemanager_V1_GetWorkspaceRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var workspaceID: String = String()
+  public var workspaceID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_DeleteWorkspaceRequest: Sendable {
+public struct Workspacemanager_V1_DeleteWorkspaceRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var workspaceID: String = String()
+  public var workspaceID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_DeleteWorkspaceResponse: Sendable {
+public struct Workspacemanager_V1_DeleteWorkspaceResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_StartWorkerRequest: Sendable {
+public struct Workspacemanager_V1_StartWorkerRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var sessionID: String = String()
+  public var sessionID: String = String()
 
-  var image: String = String()
+  public var image: String = String()
 
-  var env: Dictionary<String,String> = [:]
+  public var env: Dictionary<String,String> = [:]
 
-  var volumes: [Workspacemanager_V1_ContainerVolume] = []
+  public var volumes: [Workspacemanager_V1_ContainerVolume] = []
 
-  var command: [String] = []
+  public var command: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_StartWorkerResponse: Sendable {
+public struct Workspacemanager_V1_StartWorkerResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var workerID: String = String()
+  public var workerID: String = String()
 
-  var containerName: String = String()
+  public var containerName: String = String()
 
-  var secret: String = String()
+  public var secret: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_StopWorkerRequest: Sendable {
+public struct Workspacemanager_V1_StopWorkerRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var workerID: String = String()
+  public var workerID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_StopWorkerResponse: Sendable {
+public struct Workspacemanager_V1_StopWorkerResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_GetWorkerStatusRequest: Sendable {
+public struct Workspacemanager_V1_GetWorkerStatusRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var workerID: String = String()
+  public var workerID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_GetWorkerStatusResponse: Sendable {
+public struct Workspacemanager_V1_GetWorkerStatusResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var state: String = String()
+  public var state: String = String()
 
-  var containerID: String = String()
+  public var containerID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_ListWorkersRequest: Sendable {
+public struct Workspacemanager_V1_ListWorkersRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_ListWorkersResponse: Sendable {
+public struct Workspacemanager_V1_ListWorkersResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var workers: [Workspacemanager_V1_WmWorkerInfo] = []
+  public var workers: [Workspacemanager_V1_WmWorkerInfo] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_EnsureWorkspaceWorkerRequest: Sendable {
+public struct Workspacemanager_V1_EnsureWorkspaceWorkerRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var workspaceID: String = String()
+  public var workspaceID: String = String()
 
-  var image: String = String()
+  public var image: String = String()
 
-  var env: Dictionary<String,String> = [:]
+  public var env: Dictionary<String,String> = [:]
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_EnsureWorkspaceWorkerResponse: Sendable {
+public struct Workspacemanager_V1_EnsureWorkspaceWorkerResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var workerID: String = String()
+  public var workerID: String = String()
 
-  var containerName: String = String()
+  public var containerName: String = String()
 
-  var secret: String = String()
+  public var secret: String = String()
 
-  var volumeName: String = String()
+  public var volumeName: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_UpdateWorkspaceConfigRequest: Sendable {
+public struct Workspacemanager_V1_UpdateWorkspaceConfigRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var workspaceID: String = String()
+  public var workspaceID: String = String()
 
-  var skillSlugs: String = String()
+  public var skillSlugs: String = String()
 
-  var nixPkgs: String = String()
+  public var nixPkgs: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_UpdateWorkspaceConfigResponse: Sendable {
+public struct Workspacemanager_V1_UpdateWorkspaceConfigResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_HealthRequest: Sendable {
+public struct Workspacemanager_V1_HealthRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Workspacemanager_V1_HealthResponse: Sendable {
+public struct Workspacemanager_V1_HealthResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var status: String = String()
+  public var status: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -371,10 +371,10 @@ struct Workspacemanager_V1_HealthResponse: Sendable {
 fileprivate let _protobuf_package = "workspacemanager.v1"
 
 extension Workspacemanager_V1_WmWorkspaceInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".WmWorkspaceInfo"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaceId\0\u{1}volumeName\0\u{1}state\0\u{1}createdBySessionId\0\u{1}createdAt\0\u{1}workerPodName\0\u{1}skillSlugs\0\u{1}nixPkgs\0")
+  public static let protoMessageName: String = _protobuf_package + ".WmWorkspaceInfo"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaceId\0\u{1}volumeName\0\u{1}state\0\u{1}createdBySessionId\0\u{1}createdAt\0\u{1}workerPodName\0\u{1}skillSlugs\0\u{1}nixPkgs\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -393,7 +393,7 @@ extension Workspacemanager_V1_WmWorkspaceInfo: SwiftProtobuf.Message, SwiftProto
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.workspaceID.isEmpty {
       try visitor.visitSingularStringField(value: self.workspaceID, fieldNumber: 1)
     }
@@ -421,7 +421,7 @@ extension Workspacemanager_V1_WmWorkspaceInfo: SwiftProtobuf.Message, SwiftProto
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_WmWorkspaceInfo, rhs: Workspacemanager_V1_WmWorkspaceInfo) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_WmWorkspaceInfo, rhs: Workspacemanager_V1_WmWorkspaceInfo) -> Bool {
     if lhs.workspaceID != rhs.workspaceID {return false}
     if lhs.volumeName != rhs.volumeName {return false}
     if lhs.state != rhs.state {return false}
@@ -436,10 +436,10 @@ extension Workspacemanager_V1_WmWorkspaceInfo: SwiftProtobuf.Message, SwiftProto
 }
 
 extension Workspacemanager_V1_WmWorkerInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".WmWorkerInfo"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workerId\0\u{1}sessionId\0\u{1}containerName\0\u{1}image\0\u{1}state\0\u{1}podmanId\0\u{1}secret\0\u{1}workspaceRoot\0\u{1}filesystemUrl\0\u{1}executionUrl\0\u{1}createdAt\0\u{1}workspaceId\0")
+  public static let protoMessageName: String = _protobuf_package + ".WmWorkerInfo"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workerId\0\u{1}sessionId\0\u{1}containerName\0\u{1}image\0\u{1}state\0\u{1}podmanId\0\u{1}secret\0\u{1}workspaceRoot\0\u{1}filesystemUrl\0\u{1}executionUrl\0\u{1}createdAt\0\u{1}workspaceId\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -462,7 +462,7 @@ extension Workspacemanager_V1_WmWorkerInfo: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.workerID.isEmpty {
       try visitor.visitSingularStringField(value: self.workerID, fieldNumber: 1)
     }
@@ -502,7 +502,7 @@ extension Workspacemanager_V1_WmWorkerInfo: SwiftProtobuf.Message, SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_WmWorkerInfo, rhs: Workspacemanager_V1_WmWorkerInfo) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_WmWorkerInfo, rhs: Workspacemanager_V1_WmWorkerInfo) -> Bool {
     if lhs.workerID != rhs.workerID {return false}
     if lhs.sessionID != rhs.sessionID {return false}
     if lhs.containerName != rhs.containerName {return false}
@@ -521,10 +521,10 @@ extension Workspacemanager_V1_WmWorkerInfo: SwiftProtobuf.Message, SwiftProtobuf
 }
 
 extension Workspacemanager_V1_ContainerVolume: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ContainerVolume"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}name\0\u{1}destination\0")
+  public static let protoMessageName: String = _protobuf_package + ".ContainerVolume"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}name\0\u{1}destination\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -537,7 +537,7 @@ extension Workspacemanager_V1_ContainerVolume: SwiftProtobuf.Message, SwiftProto
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.name.isEmpty {
       try visitor.visitSingularStringField(value: self.name, fieldNumber: 1)
     }
@@ -547,7 +547,7 @@ extension Workspacemanager_V1_ContainerVolume: SwiftProtobuf.Message, SwiftProto
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_ContainerVolume, rhs: Workspacemanager_V1_ContainerVolume) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_ContainerVolume, rhs: Workspacemanager_V1_ContainerVolume) -> Bool {
     if lhs.name != rhs.name {return false}
     if lhs.destination != rhs.destination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -556,10 +556,10 @@ extension Workspacemanager_V1_ContainerVolume: SwiftProtobuf.Message, SwiftProto
 }
 
 extension Workspacemanager_V1_CreateWorkspaceRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".CreateWorkspaceRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}sessionId\0")
+  public static let protoMessageName: String = _protobuf_package + ".CreateWorkspaceRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}sessionId\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -571,14 +571,14 @@ extension Workspacemanager_V1_CreateWorkspaceRequest: SwiftProtobuf.Message, Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.sessionID.isEmpty {
       try visitor.visitSingularStringField(value: self.sessionID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_CreateWorkspaceRequest, rhs: Workspacemanager_V1_CreateWorkspaceRequest) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_CreateWorkspaceRequest, rhs: Workspacemanager_V1_CreateWorkspaceRequest) -> Bool {
     if lhs.sessionID != rhs.sessionID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -586,10 +586,10 @@ extension Workspacemanager_V1_CreateWorkspaceRequest: SwiftProtobuf.Message, Swi
 }
 
 extension Workspacemanager_V1_CreateWorkspaceResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".CreateWorkspaceResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaceId\0\u{1}volumeName\0")
+  public static let protoMessageName: String = _protobuf_package + ".CreateWorkspaceResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaceId\0\u{1}volumeName\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -602,7 +602,7 @@ extension Workspacemanager_V1_CreateWorkspaceResponse: SwiftProtobuf.Message, Sw
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.workspaceID.isEmpty {
       try visitor.visitSingularStringField(value: self.workspaceID, fieldNumber: 1)
     }
@@ -612,7 +612,7 @@ extension Workspacemanager_V1_CreateWorkspaceResponse: SwiftProtobuf.Message, Sw
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_CreateWorkspaceResponse, rhs: Workspacemanager_V1_CreateWorkspaceResponse) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_CreateWorkspaceResponse, rhs: Workspacemanager_V1_CreateWorkspaceResponse) -> Bool {
     if lhs.workspaceID != rhs.workspaceID {return false}
     if lhs.volumeName != rhs.volumeName {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -621,29 +621,29 @@ extension Workspacemanager_V1_CreateWorkspaceResponse: SwiftProtobuf.Message, Sw
 }
 
 extension Workspacemanager_V1_ListWorkspacesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListWorkspacesRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".ListWorkspacesRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     // Load everything into unknown fields
     while try decoder.nextFieldNumber() != nil {}
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_ListWorkspacesRequest, rhs: Workspacemanager_V1_ListWorkspacesRequest) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_ListWorkspacesRequest, rhs: Workspacemanager_V1_ListWorkspacesRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Workspacemanager_V1_ListWorkspacesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListWorkspacesResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaces\0")
+  public static let protoMessageName: String = _protobuf_package + ".ListWorkspacesResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaces\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -655,14 +655,14 @@ extension Workspacemanager_V1_ListWorkspacesResponse: SwiftProtobuf.Message, Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.workspaces.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.workspaces, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_ListWorkspacesResponse, rhs: Workspacemanager_V1_ListWorkspacesResponse) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_ListWorkspacesResponse, rhs: Workspacemanager_V1_ListWorkspacesResponse) -> Bool {
     if lhs.workspaces != rhs.workspaces {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -670,10 +670,10 @@ extension Workspacemanager_V1_ListWorkspacesResponse: SwiftProtobuf.Message, Swi
 }
 
 extension Workspacemanager_V1_GetWorkspaceRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetWorkspaceRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaceId\0")
+  public static let protoMessageName: String = _protobuf_package + ".GetWorkspaceRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaceId\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -685,14 +685,14 @@ extension Workspacemanager_V1_GetWorkspaceRequest: SwiftProtobuf.Message, SwiftP
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.workspaceID.isEmpty {
       try visitor.visitSingularStringField(value: self.workspaceID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_GetWorkspaceRequest, rhs: Workspacemanager_V1_GetWorkspaceRequest) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_GetWorkspaceRequest, rhs: Workspacemanager_V1_GetWorkspaceRequest) -> Bool {
     if lhs.workspaceID != rhs.workspaceID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -700,10 +700,10 @@ extension Workspacemanager_V1_GetWorkspaceRequest: SwiftProtobuf.Message, SwiftP
 }
 
 extension Workspacemanager_V1_DeleteWorkspaceRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DeleteWorkspaceRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaceId\0")
+  public static let protoMessageName: String = _protobuf_package + ".DeleteWorkspaceRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaceId\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -715,14 +715,14 @@ extension Workspacemanager_V1_DeleteWorkspaceRequest: SwiftProtobuf.Message, Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.workspaceID.isEmpty {
       try visitor.visitSingularStringField(value: self.workspaceID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_DeleteWorkspaceRequest, rhs: Workspacemanager_V1_DeleteWorkspaceRequest) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_DeleteWorkspaceRequest, rhs: Workspacemanager_V1_DeleteWorkspaceRequest) -> Bool {
     if lhs.workspaceID != rhs.workspaceID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -730,29 +730,29 @@ extension Workspacemanager_V1_DeleteWorkspaceRequest: SwiftProtobuf.Message, Swi
 }
 
 extension Workspacemanager_V1_DeleteWorkspaceResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DeleteWorkspaceResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".DeleteWorkspaceResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     // Load everything into unknown fields
     while try decoder.nextFieldNumber() != nil {}
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_DeleteWorkspaceResponse, rhs: Workspacemanager_V1_DeleteWorkspaceResponse) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_DeleteWorkspaceResponse, rhs: Workspacemanager_V1_DeleteWorkspaceResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Workspacemanager_V1_StartWorkerRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".StartWorkerRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}sessionId\0\u{1}image\0\u{1}env\0\u{1}volumes\0\u{1}command\0")
+  public static let protoMessageName: String = _protobuf_package + ".StartWorkerRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}sessionId\0\u{1}image\0\u{1}env\0\u{1}volumes\0\u{1}command\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -768,7 +768,7 @@ extension Workspacemanager_V1_StartWorkerRequest: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.sessionID.isEmpty {
       try visitor.visitSingularStringField(value: self.sessionID, fieldNumber: 1)
     }
@@ -787,7 +787,7 @@ extension Workspacemanager_V1_StartWorkerRequest: SwiftProtobuf.Message, SwiftPr
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_StartWorkerRequest, rhs: Workspacemanager_V1_StartWorkerRequest) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_StartWorkerRequest, rhs: Workspacemanager_V1_StartWorkerRequest) -> Bool {
     if lhs.sessionID != rhs.sessionID {return false}
     if lhs.image != rhs.image {return false}
     if lhs.env != rhs.env {return false}
@@ -799,10 +799,10 @@ extension Workspacemanager_V1_StartWorkerRequest: SwiftProtobuf.Message, SwiftPr
 }
 
 extension Workspacemanager_V1_StartWorkerResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".StartWorkerResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workerId\0\u{1}containerName\0\u{1}secret\0")
+  public static let protoMessageName: String = _protobuf_package + ".StartWorkerResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workerId\0\u{1}containerName\0\u{1}secret\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -816,7 +816,7 @@ extension Workspacemanager_V1_StartWorkerResponse: SwiftProtobuf.Message, SwiftP
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.workerID.isEmpty {
       try visitor.visitSingularStringField(value: self.workerID, fieldNumber: 1)
     }
@@ -829,7 +829,7 @@ extension Workspacemanager_V1_StartWorkerResponse: SwiftProtobuf.Message, SwiftP
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_StartWorkerResponse, rhs: Workspacemanager_V1_StartWorkerResponse) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_StartWorkerResponse, rhs: Workspacemanager_V1_StartWorkerResponse) -> Bool {
     if lhs.workerID != rhs.workerID {return false}
     if lhs.containerName != rhs.containerName {return false}
     if lhs.secret != rhs.secret {return false}
@@ -839,10 +839,10 @@ extension Workspacemanager_V1_StartWorkerResponse: SwiftProtobuf.Message, SwiftP
 }
 
 extension Workspacemanager_V1_StopWorkerRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".StopWorkerRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workerId\0")
+  public static let protoMessageName: String = _protobuf_package + ".StopWorkerRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workerId\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -854,14 +854,14 @@ extension Workspacemanager_V1_StopWorkerRequest: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.workerID.isEmpty {
       try visitor.visitSingularStringField(value: self.workerID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_StopWorkerRequest, rhs: Workspacemanager_V1_StopWorkerRequest) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_StopWorkerRequest, rhs: Workspacemanager_V1_StopWorkerRequest) -> Bool {
     if lhs.workerID != rhs.workerID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -869,29 +869,29 @@ extension Workspacemanager_V1_StopWorkerRequest: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Workspacemanager_V1_StopWorkerResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".StopWorkerResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".StopWorkerResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     // Load everything into unknown fields
     while try decoder.nextFieldNumber() != nil {}
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_StopWorkerResponse, rhs: Workspacemanager_V1_StopWorkerResponse) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_StopWorkerResponse, rhs: Workspacemanager_V1_StopWorkerResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Workspacemanager_V1_GetWorkerStatusRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetWorkerStatusRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workerId\0")
+  public static let protoMessageName: String = _protobuf_package + ".GetWorkerStatusRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workerId\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -903,14 +903,14 @@ extension Workspacemanager_V1_GetWorkerStatusRequest: SwiftProtobuf.Message, Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.workerID.isEmpty {
       try visitor.visitSingularStringField(value: self.workerID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_GetWorkerStatusRequest, rhs: Workspacemanager_V1_GetWorkerStatusRequest) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_GetWorkerStatusRequest, rhs: Workspacemanager_V1_GetWorkerStatusRequest) -> Bool {
     if lhs.workerID != rhs.workerID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -918,10 +918,10 @@ extension Workspacemanager_V1_GetWorkerStatusRequest: SwiftProtobuf.Message, Swi
 }
 
 extension Workspacemanager_V1_GetWorkerStatusResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetWorkerStatusResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}state\0\u{1}containerId\0")
+  public static let protoMessageName: String = _protobuf_package + ".GetWorkerStatusResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}state\0\u{1}containerId\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -934,7 +934,7 @@ extension Workspacemanager_V1_GetWorkerStatusResponse: SwiftProtobuf.Message, Sw
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.state.isEmpty {
       try visitor.visitSingularStringField(value: self.state, fieldNumber: 1)
     }
@@ -944,7 +944,7 @@ extension Workspacemanager_V1_GetWorkerStatusResponse: SwiftProtobuf.Message, Sw
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_GetWorkerStatusResponse, rhs: Workspacemanager_V1_GetWorkerStatusResponse) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_GetWorkerStatusResponse, rhs: Workspacemanager_V1_GetWorkerStatusResponse) -> Bool {
     if lhs.state != rhs.state {return false}
     if lhs.containerID != rhs.containerID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -953,29 +953,29 @@ extension Workspacemanager_V1_GetWorkerStatusResponse: SwiftProtobuf.Message, Sw
 }
 
 extension Workspacemanager_V1_ListWorkersRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListWorkersRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".ListWorkersRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     // Load everything into unknown fields
     while try decoder.nextFieldNumber() != nil {}
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_ListWorkersRequest, rhs: Workspacemanager_V1_ListWorkersRequest) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_ListWorkersRequest, rhs: Workspacemanager_V1_ListWorkersRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Workspacemanager_V1_ListWorkersResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListWorkersResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workers\0")
+  public static let protoMessageName: String = _protobuf_package + ".ListWorkersResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workers\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -987,14 +987,14 @@ extension Workspacemanager_V1_ListWorkersResponse: SwiftProtobuf.Message, SwiftP
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.workers.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.workers, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_ListWorkersResponse, rhs: Workspacemanager_V1_ListWorkersResponse) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_ListWorkersResponse, rhs: Workspacemanager_V1_ListWorkersResponse) -> Bool {
     if lhs.workers != rhs.workers {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1002,10 +1002,10 @@ extension Workspacemanager_V1_ListWorkersResponse: SwiftProtobuf.Message, SwiftP
 }
 
 extension Workspacemanager_V1_EnsureWorkspaceWorkerRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EnsureWorkspaceWorkerRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaceId\0\u{1}image\0\u{1}env\0")
+  public static let protoMessageName: String = _protobuf_package + ".EnsureWorkspaceWorkerRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaceId\0\u{1}image\0\u{1}env\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1019,7 +1019,7 @@ extension Workspacemanager_V1_EnsureWorkspaceWorkerRequest: SwiftProtobuf.Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.workspaceID.isEmpty {
       try visitor.visitSingularStringField(value: self.workspaceID, fieldNumber: 1)
     }
@@ -1032,7 +1032,7 @@ extension Workspacemanager_V1_EnsureWorkspaceWorkerRequest: SwiftProtobuf.Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_EnsureWorkspaceWorkerRequest, rhs: Workspacemanager_V1_EnsureWorkspaceWorkerRequest) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_EnsureWorkspaceWorkerRequest, rhs: Workspacemanager_V1_EnsureWorkspaceWorkerRequest) -> Bool {
     if lhs.workspaceID != rhs.workspaceID {return false}
     if lhs.image != rhs.image {return false}
     if lhs.env != rhs.env {return false}
@@ -1042,10 +1042,10 @@ extension Workspacemanager_V1_EnsureWorkspaceWorkerRequest: SwiftProtobuf.Messag
 }
 
 extension Workspacemanager_V1_EnsureWorkspaceWorkerResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EnsureWorkspaceWorkerResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workerId\0\u{1}containerName\0\u{1}secret\0\u{1}volumeName\0")
+  public static let protoMessageName: String = _protobuf_package + ".EnsureWorkspaceWorkerResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workerId\0\u{1}containerName\0\u{1}secret\0\u{1}volumeName\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1060,7 +1060,7 @@ extension Workspacemanager_V1_EnsureWorkspaceWorkerResponse: SwiftProtobuf.Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.workerID.isEmpty {
       try visitor.visitSingularStringField(value: self.workerID, fieldNumber: 1)
     }
@@ -1076,7 +1076,7 @@ extension Workspacemanager_V1_EnsureWorkspaceWorkerResponse: SwiftProtobuf.Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_EnsureWorkspaceWorkerResponse, rhs: Workspacemanager_V1_EnsureWorkspaceWorkerResponse) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_EnsureWorkspaceWorkerResponse, rhs: Workspacemanager_V1_EnsureWorkspaceWorkerResponse) -> Bool {
     if lhs.workerID != rhs.workerID {return false}
     if lhs.containerName != rhs.containerName {return false}
     if lhs.secret != rhs.secret {return false}
@@ -1087,10 +1087,10 @@ extension Workspacemanager_V1_EnsureWorkspaceWorkerResponse: SwiftProtobuf.Messa
 }
 
 extension Workspacemanager_V1_UpdateWorkspaceConfigRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".UpdateWorkspaceConfigRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaceId\0\u{1}skillSlugs\0\u{1}nixPkgs\0")
+  public static let protoMessageName: String = _protobuf_package + ".UpdateWorkspaceConfigRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}workspaceId\0\u{1}skillSlugs\0\u{1}nixPkgs\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1104,7 +1104,7 @@ extension Workspacemanager_V1_UpdateWorkspaceConfigRequest: SwiftProtobuf.Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.workspaceID.isEmpty {
       try visitor.visitSingularStringField(value: self.workspaceID, fieldNumber: 1)
     }
@@ -1117,7 +1117,7 @@ extension Workspacemanager_V1_UpdateWorkspaceConfigRequest: SwiftProtobuf.Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_UpdateWorkspaceConfigRequest, rhs: Workspacemanager_V1_UpdateWorkspaceConfigRequest) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_UpdateWorkspaceConfigRequest, rhs: Workspacemanager_V1_UpdateWorkspaceConfigRequest) -> Bool {
     if lhs.workspaceID != rhs.workspaceID {return false}
     if lhs.skillSlugs != rhs.skillSlugs {return false}
     if lhs.nixPkgs != rhs.nixPkgs {return false}
@@ -1127,48 +1127,48 @@ extension Workspacemanager_V1_UpdateWorkspaceConfigRequest: SwiftProtobuf.Messag
 }
 
 extension Workspacemanager_V1_UpdateWorkspaceConfigResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".UpdateWorkspaceConfigResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".UpdateWorkspaceConfigResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     // Load everything into unknown fields
     while try decoder.nextFieldNumber() != nil {}
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_UpdateWorkspaceConfigResponse, rhs: Workspacemanager_V1_UpdateWorkspaceConfigResponse) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_UpdateWorkspaceConfigResponse, rhs: Workspacemanager_V1_UpdateWorkspaceConfigResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Workspacemanager_V1_HealthRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".HealthRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".HealthRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     // Load everything into unknown fields
     while try decoder.nextFieldNumber() != nil {}
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_HealthRequest, rhs: Workspacemanager_V1_HealthRequest) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_HealthRequest, rhs: Workspacemanager_V1_HealthRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Workspacemanager_V1_HealthResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".HealthResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}status\0")
+  public static let protoMessageName: String = _protobuf_package + ".HealthResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}status\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1180,14 +1180,14 @@ extension Workspacemanager_V1_HealthResponse: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.status.isEmpty {
       try visitor.visitSingularStringField(value: self.status, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Workspacemanager_V1_HealthResponse, rhs: Workspacemanager_V1_HealthResponse) -> Bool {
+  public static func ==(lhs: Workspacemanager_V1_HealthResponse, rhs: Workspacemanager_V1_HealthResponse) -> Bool {
     if lhs.status != rhs.status {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

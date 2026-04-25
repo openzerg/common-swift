@@ -9,64 +9,104 @@ import Connect
 import Foundation
 import SwiftProtobuf
 
-internal protocol Skillmanager_V1_SkillManagerServiceClientInterface: Sendable {
+public protocol Skillmanager_V1_SkillManagerServiceClientInterface: Sendable {
+
+    @discardableResult
+    func `registerSkill`(request: Skillmanager_V1_RegisterSkillRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Skillmanager_V1_RegisterSkillResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `registerSkill`(request: Skillmanager_V1_RegisterSkillRequest, headers: Connect.Headers) async -> ResponseMessage<Skillmanager_V1_RegisterSkillResponse>
 
+    @discardableResult
+    func `updateSkill`(request: Skillmanager_V1_UpdateSkillRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Skillmanager_V1_UpdateSkillResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `updateSkill`(request: Skillmanager_V1_UpdateSkillRequest, headers: Connect.Headers) async -> ResponseMessage<Skillmanager_V1_UpdateSkillResponse>
+
+    @discardableResult
+    func `deleteSkill`(request: Skillmanager_V1_DeleteSkillRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Skillmanager_V1_DeleteSkillResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `deleteSkill`(request: Skillmanager_V1_DeleteSkillRequest, headers: Connect.Headers) async -> ResponseMessage<Skillmanager_V1_DeleteSkillResponse>
 
+    @discardableResult
+    func `listSkills`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Skillmanager_V1_ListSkillsResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `listSkills`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers) async -> ResponseMessage<Skillmanager_V1_ListSkillsResponse>
+
+    @discardableResult
+    func `getSkill`(request: Skillmanager_V1_GetSkillRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Skillmanager_V1_SkillInfo>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `getSkill`(request: Skillmanager_V1_GetSkillRequest, headers: Connect.Headers) async -> ResponseMessage<Skillmanager_V1_SkillInfo>
 }
 
 /// Concrete implementation of `Skillmanager_V1_SkillManagerServiceClientInterface`.
-internal final class Skillmanager_V1_SkillManagerServiceClient: Skillmanager_V1_SkillManagerServiceClientInterface, Sendable {
+public final class Skillmanager_V1_SkillManagerServiceClient: Skillmanager_V1_SkillManagerServiceClientInterface, Sendable {
     private let client: Connect.ProtocolClientInterface
 
-    internal init(client: Connect.ProtocolClientInterface) {
+    public init(client: Connect.ProtocolClientInterface) {
         self.client = client
     }
 
+    @discardableResult
+    public func `registerSkill`(request: Skillmanager_V1_RegisterSkillRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Skillmanager_V1_RegisterSkillResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/skillmanager.v1.SkillManagerService/RegisterSkill", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `registerSkill`(request: Skillmanager_V1_RegisterSkillRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Skillmanager_V1_RegisterSkillResponse> {
+    public func `registerSkill`(request: Skillmanager_V1_RegisterSkillRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Skillmanager_V1_RegisterSkillResponse> {
         return await self.client.unary(path: "/skillmanager.v1.SkillManagerService/RegisterSkill", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `updateSkill`(request: Skillmanager_V1_UpdateSkillRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Skillmanager_V1_UpdateSkillResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/skillmanager.v1.SkillManagerService/UpdateSkill", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `updateSkill`(request: Skillmanager_V1_UpdateSkillRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Skillmanager_V1_UpdateSkillResponse> {
+    public func `updateSkill`(request: Skillmanager_V1_UpdateSkillRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Skillmanager_V1_UpdateSkillResponse> {
         return await self.client.unary(path: "/skillmanager.v1.SkillManagerService/UpdateSkill", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `deleteSkill`(request: Skillmanager_V1_DeleteSkillRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Skillmanager_V1_DeleteSkillResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/skillmanager.v1.SkillManagerService/DeleteSkill", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `deleteSkill`(request: Skillmanager_V1_DeleteSkillRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Skillmanager_V1_DeleteSkillResponse> {
+    public func `deleteSkill`(request: Skillmanager_V1_DeleteSkillRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Skillmanager_V1_DeleteSkillResponse> {
         return await self.client.unary(path: "/skillmanager.v1.SkillManagerService/DeleteSkill", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `listSkills`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Skillmanager_V1_ListSkillsResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/skillmanager.v1.SkillManagerService/ListSkills", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `listSkills`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Skillmanager_V1_ListSkillsResponse> {
+    public func `listSkills`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Skillmanager_V1_ListSkillsResponse> {
         return await self.client.unary(path: "/skillmanager.v1.SkillManagerService/ListSkills", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `getSkill`(request: Skillmanager_V1_GetSkillRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Skillmanager_V1_SkillInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/skillmanager.v1.SkillManagerService/GetSkill", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `getSkill`(request: Skillmanager_V1_GetSkillRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Skillmanager_V1_SkillInfo> {
+    public func `getSkill`(request: Skillmanager_V1_GetSkillRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Skillmanager_V1_SkillInfo> {
         return await self.client.unary(path: "/skillmanager.v1.SkillManagerService/GetSkill", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
-    internal enum Metadata {
-        internal enum Methods {
-            internal static let registerSkill = Connect.MethodSpec(name: "RegisterSkill", service: "skillmanager.v1.SkillManagerService", type: .unary)
-            internal static let updateSkill = Connect.MethodSpec(name: "UpdateSkill", service: "skillmanager.v1.SkillManagerService", type: .unary)
-            internal static let deleteSkill = Connect.MethodSpec(name: "DeleteSkill", service: "skillmanager.v1.SkillManagerService", type: .unary)
-            internal static let listSkills = Connect.MethodSpec(name: "ListSkills", service: "skillmanager.v1.SkillManagerService", type: .unary)
-            internal static let getSkill = Connect.MethodSpec(name: "GetSkill", service: "skillmanager.v1.SkillManagerService", type: .unary)
+    public enum Metadata {
+        public enum Methods {
+            public static let registerSkill = Connect.MethodSpec(name: "RegisterSkill", service: "skillmanager.v1.SkillManagerService", type: .unary)
+            public static let updateSkill = Connect.MethodSpec(name: "UpdateSkill", service: "skillmanager.v1.SkillManagerService", type: .unary)
+            public static let deleteSkill = Connect.MethodSpec(name: "DeleteSkill", service: "skillmanager.v1.SkillManagerService", type: .unary)
+            public static let listSkills = Connect.MethodSpec(name: "ListSkills", service: "skillmanager.v1.SkillManagerService", type: .unary)
+            public static let getSkill = Connect.MethodSpec(name: "GetSkill", service: "skillmanager.v1.SkillManagerService", type: .unary)
         }
     }
 }

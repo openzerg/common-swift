@@ -25,158 +25,158 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Skillmanager_V1_RegisterSkillRequest: Sendable {
+public struct Skillmanager_V1_RegisterSkillRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var slug: String = String()
+  public var slug: String = String()
 
-  var gitURL: String = String()
+  public var gitURL: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Skillmanager_V1_SkillInfo: Sendable {
+public struct Skillmanager_V1_SkillInfo: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String = String()
+  public var id: String = String()
 
-  var slug: String = String()
+  public var slug: String = String()
 
-  var name: String = String()
+  public var name: String = String()
 
-  var description_p: String = String()
+  public var description_p: String = String()
 
-  var gitURL: String = String()
+  public var gitURL: String = String()
 
-  var localPath: String = String()
+  public var localPath: String = String()
 
-  var commitHash: String = String()
+  public var commitHash: String = String()
 
-  var pkgs: String = String()
+  public var pkgs: String = String()
 
-  var createdAt: Int64 = 0
+  public var createdAt: Int64 = 0
 
-  var updatedAt: Int64 = 0
+  public var updatedAt: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Skillmanager_V1_RegisterSkillResponse: Sendable {
+public struct Skillmanager_V1_RegisterSkillResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var skill: Skillmanager_V1_SkillInfo {
+  public var skill: Skillmanager_V1_SkillInfo {
     get {_skill ?? Skillmanager_V1_SkillInfo()}
     set {_skill = newValue}
   }
   /// Returns true if `skill` has been explicitly set.
-  var hasSkill: Bool {self._skill != nil}
+  public var hasSkill: Bool {self._skill != nil}
   /// Clears the value of `skill`. Subsequent reads from it will return its default value.
-  mutating func clearSkill() {self._skill = nil}
+  public mutating func clearSkill() {self._skill = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _skill: Skillmanager_V1_SkillInfo? = nil
 }
 
-struct Skillmanager_V1_UpdateSkillRequest: Sendable {
+public struct Skillmanager_V1_UpdateSkillRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var slug: String = String()
+  public var slug: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Skillmanager_V1_UpdateSkillResponse: Sendable {
+public struct Skillmanager_V1_UpdateSkillResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var skill: Skillmanager_V1_SkillInfo {
+  public var skill: Skillmanager_V1_SkillInfo {
     get {_skill ?? Skillmanager_V1_SkillInfo()}
     set {_skill = newValue}
   }
   /// Returns true if `skill` has been explicitly set.
-  var hasSkill: Bool {self._skill != nil}
+  public var hasSkill: Bool {self._skill != nil}
   /// Clears the value of `skill`. Subsequent reads from it will return its default value.
-  mutating func clearSkill() {self._skill = nil}
+  public mutating func clearSkill() {self._skill = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _skill: Skillmanager_V1_SkillInfo? = nil
 }
 
-struct Skillmanager_V1_DeleteSkillRequest: Sendable {
+public struct Skillmanager_V1_DeleteSkillRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var slug: String = String()
+  public var slug: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Skillmanager_V1_DeleteSkillResponse: Sendable {
+public struct Skillmanager_V1_DeleteSkillResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Skillmanager_V1_ListSkillsRequest: Sendable {
+public struct Skillmanager_V1_ListSkillsRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Skillmanager_V1_ListSkillsResponse: Sendable {
+public struct Skillmanager_V1_ListSkillsResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var skills: [Skillmanager_V1_SkillInfo] = []
+  public var skills: [Skillmanager_V1_SkillInfo] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Skillmanager_V1_GetSkillRequest: Sendable {
+public struct Skillmanager_V1_GetSkillRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var slug: String = String()
+  public var slug: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -184,10 +184,10 @@ struct Skillmanager_V1_GetSkillRequest: Sendable {
 fileprivate let _protobuf_package = "skillmanager.v1"
 
 extension Skillmanager_V1_RegisterSkillRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RegisterSkillRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}slug\0\u{1}gitUrl\0")
+  public static let protoMessageName: String = _protobuf_package + ".RegisterSkillRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}slug\0\u{1}gitUrl\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -200,7 +200,7 @@ extension Skillmanager_V1_RegisterSkillRequest: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.slug.isEmpty {
       try visitor.visitSingularStringField(value: self.slug, fieldNumber: 1)
     }
@@ -210,7 +210,7 @@ extension Skillmanager_V1_RegisterSkillRequest: SwiftProtobuf.Message, SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Skillmanager_V1_RegisterSkillRequest, rhs: Skillmanager_V1_RegisterSkillRequest) -> Bool {
+  public static func ==(lhs: Skillmanager_V1_RegisterSkillRequest, rhs: Skillmanager_V1_RegisterSkillRequest) -> Bool {
     if lhs.slug != rhs.slug {return false}
     if lhs.gitURL != rhs.gitURL {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -219,10 +219,10 @@ extension Skillmanager_V1_RegisterSkillRequest: SwiftProtobuf.Message, SwiftProt
 }
 
 extension Skillmanager_V1_SkillInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SkillInfo"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}slug\0\u{1}name\0\u{1}description\0\u{1}gitUrl\0\u{1}localPath\0\u{1}commitHash\0\u{1}pkgs\0\u{1}createdAt\0\u{1}updatedAt\0")
+  public static let protoMessageName: String = _protobuf_package + ".SkillInfo"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}slug\0\u{1}name\0\u{1}description\0\u{1}gitUrl\0\u{1}localPath\0\u{1}commitHash\0\u{1}pkgs\0\u{1}createdAt\0\u{1}updatedAt\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -243,7 +243,7 @@ extension Skillmanager_V1_SkillInfo: SwiftProtobuf.Message, SwiftProtobuf._Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.id.isEmpty {
       try visitor.visitSingularStringField(value: self.id, fieldNumber: 1)
     }
@@ -277,7 +277,7 @@ extension Skillmanager_V1_SkillInfo: SwiftProtobuf.Message, SwiftProtobuf._Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Skillmanager_V1_SkillInfo, rhs: Skillmanager_V1_SkillInfo) -> Bool {
+  public static func ==(lhs: Skillmanager_V1_SkillInfo, rhs: Skillmanager_V1_SkillInfo) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.slug != rhs.slug {return false}
     if lhs.name != rhs.name {return false}
@@ -294,10 +294,10 @@ extension Skillmanager_V1_SkillInfo: SwiftProtobuf.Message, SwiftProtobuf._Messa
 }
 
 extension Skillmanager_V1_RegisterSkillResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RegisterSkillResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}skill\0")
+  public static let protoMessageName: String = _protobuf_package + ".RegisterSkillResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}skill\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -309,7 +309,7 @@ extension Skillmanager_V1_RegisterSkillResponse: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -320,7 +320,7 @@ extension Skillmanager_V1_RegisterSkillResponse: SwiftProtobuf.Message, SwiftPro
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Skillmanager_V1_RegisterSkillResponse, rhs: Skillmanager_V1_RegisterSkillResponse) -> Bool {
+  public static func ==(lhs: Skillmanager_V1_RegisterSkillResponse, rhs: Skillmanager_V1_RegisterSkillResponse) -> Bool {
     if lhs._skill != rhs._skill {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -328,10 +328,10 @@ extension Skillmanager_V1_RegisterSkillResponse: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Skillmanager_V1_UpdateSkillRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".UpdateSkillRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}slug\0")
+  public static let protoMessageName: String = _protobuf_package + ".UpdateSkillRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}slug\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -343,14 +343,14 @@ extension Skillmanager_V1_UpdateSkillRequest: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.slug.isEmpty {
       try visitor.visitSingularStringField(value: self.slug, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Skillmanager_V1_UpdateSkillRequest, rhs: Skillmanager_V1_UpdateSkillRequest) -> Bool {
+  public static func ==(lhs: Skillmanager_V1_UpdateSkillRequest, rhs: Skillmanager_V1_UpdateSkillRequest) -> Bool {
     if lhs.slug != rhs.slug {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -358,10 +358,10 @@ extension Skillmanager_V1_UpdateSkillRequest: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension Skillmanager_V1_UpdateSkillResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".UpdateSkillResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}skill\0")
+  public static let protoMessageName: String = _protobuf_package + ".UpdateSkillResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}skill\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -373,7 +373,7 @@ extension Skillmanager_V1_UpdateSkillResponse: SwiftProtobuf.Message, SwiftProto
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -384,7 +384,7 @@ extension Skillmanager_V1_UpdateSkillResponse: SwiftProtobuf.Message, SwiftProto
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Skillmanager_V1_UpdateSkillResponse, rhs: Skillmanager_V1_UpdateSkillResponse) -> Bool {
+  public static func ==(lhs: Skillmanager_V1_UpdateSkillResponse, rhs: Skillmanager_V1_UpdateSkillResponse) -> Bool {
     if lhs._skill != rhs._skill {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -392,10 +392,10 @@ extension Skillmanager_V1_UpdateSkillResponse: SwiftProtobuf.Message, SwiftProto
 }
 
 extension Skillmanager_V1_DeleteSkillRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DeleteSkillRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}slug\0")
+  public static let protoMessageName: String = _protobuf_package + ".DeleteSkillRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}slug\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -407,14 +407,14 @@ extension Skillmanager_V1_DeleteSkillRequest: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.slug.isEmpty {
       try visitor.visitSingularStringField(value: self.slug, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Skillmanager_V1_DeleteSkillRequest, rhs: Skillmanager_V1_DeleteSkillRequest) -> Bool {
+  public static func ==(lhs: Skillmanager_V1_DeleteSkillRequest, rhs: Skillmanager_V1_DeleteSkillRequest) -> Bool {
     if lhs.slug != rhs.slug {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -422,48 +422,48 @@ extension Skillmanager_V1_DeleteSkillRequest: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension Skillmanager_V1_DeleteSkillResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DeleteSkillResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".DeleteSkillResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     // Load everything into unknown fields
     while try decoder.nextFieldNumber() != nil {}
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Skillmanager_V1_DeleteSkillResponse, rhs: Skillmanager_V1_DeleteSkillResponse) -> Bool {
+  public static func ==(lhs: Skillmanager_V1_DeleteSkillResponse, rhs: Skillmanager_V1_DeleteSkillResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Skillmanager_V1_ListSkillsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListSkillsRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".ListSkillsRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     // Load everything into unknown fields
     while try decoder.nextFieldNumber() != nil {}
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Skillmanager_V1_ListSkillsRequest, rhs: Skillmanager_V1_ListSkillsRequest) -> Bool {
+  public static func ==(lhs: Skillmanager_V1_ListSkillsRequest, rhs: Skillmanager_V1_ListSkillsRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Skillmanager_V1_ListSkillsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListSkillsResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}skills\0")
+  public static let protoMessageName: String = _protobuf_package + ".ListSkillsResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}skills\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -475,14 +475,14 @@ extension Skillmanager_V1_ListSkillsResponse: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.skills.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.skills, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Skillmanager_V1_ListSkillsResponse, rhs: Skillmanager_V1_ListSkillsResponse) -> Bool {
+  public static func ==(lhs: Skillmanager_V1_ListSkillsResponse, rhs: Skillmanager_V1_ListSkillsResponse) -> Bool {
     if lhs.skills != rhs.skills {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -490,10 +490,10 @@ extension Skillmanager_V1_ListSkillsResponse: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension Skillmanager_V1_GetSkillRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GetSkillRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}slug\0")
+  public static let protoMessageName: String = _protobuf_package + ".GetSkillRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}slug\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -505,14 +505,14 @@ extension Skillmanager_V1_GetSkillRequest: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.slug.isEmpty {
       try visitor.visitSingularStringField(value: self.slug, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Skillmanager_V1_GetSkillRequest, rhs: Skillmanager_V1_GetSkillRequest) -> Bool {
+  public static func ==(lhs: Skillmanager_V1_GetSkillRequest, rhs: Skillmanager_V1_GetSkillRequest) -> Bool {
     if lhs.slug != rhs.slug {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

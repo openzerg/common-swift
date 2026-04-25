@@ -9,82 +9,138 @@ import Connect
 import Foundation
 import SwiftProtobuf
 
-internal protocol Worker_V1_WorkerServiceClientInterface: Sendable {
+public protocol Worker_V1_WorkerServiceClientInterface: Sendable {
+
+    @discardableResult
+    func `exec`(request: Worker_V1_ExecRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Worker_V1_ExecResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `exec`(request: Worker_V1_ExecRequest, headers: Connect.Headers) async -> ResponseMessage<Worker_V1_ExecResponse>
 
+    @discardableResult
+    func `spawn`(request: Worker_V1_SpawnRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Worker_V1_SpawnResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `spawn`(request: Worker_V1_SpawnRequest, headers: Connect.Headers) async -> ResponseMessage<Worker_V1_SpawnResponse>
+
+    @discardableResult
+    func `readFile`(request: Worker_V1_ReadFileRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Worker_V1_ReadFileResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `readFile`(request: Worker_V1_ReadFileRequest, headers: Connect.Headers) async -> ResponseMessage<Worker_V1_ReadFileResponse>
 
+    @discardableResult
+    func `writeFile`(request: Worker_V1_WriteFileRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Worker_V1_WriteFileResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `writeFile`(request: Worker_V1_WriteFileRequest, headers: Connect.Headers) async -> ResponseMessage<Worker_V1_WriteFileResponse>
+
+    @discardableResult
+    func `stat`(request: Worker_V1_StatRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Worker_V1_StatResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `stat`(request: Worker_V1_StatRequest, headers: Connect.Headers) async -> ResponseMessage<Worker_V1_StatResponse>
 
+    @discardableResult
+    func `installPackages`(request: Worker_V1_InstallPackagesRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Worker_V1_InstallPackagesResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `installPackages`(request: Worker_V1_InstallPackagesRequest, headers: Connect.Headers) async -> ResponseMessage<Worker_V1_InstallPackagesResponse>
+
+    @discardableResult
+    func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Worker_V1_HealthResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers) async -> ResponseMessage<Worker_V1_HealthResponse>
 }
 
 /// Concrete implementation of `Worker_V1_WorkerServiceClientInterface`.
-internal final class Worker_V1_WorkerServiceClient: Worker_V1_WorkerServiceClientInterface, Sendable {
+public final class Worker_V1_WorkerServiceClient: Worker_V1_WorkerServiceClientInterface, Sendable {
     private let client: Connect.ProtocolClientInterface
 
-    internal init(client: Connect.ProtocolClientInterface) {
+    public init(client: Connect.ProtocolClientInterface) {
         self.client = client
     }
 
+    @discardableResult
+    public func `exec`(request: Worker_V1_ExecRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Worker_V1_ExecResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/worker.v1.WorkerService/Exec", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `exec`(request: Worker_V1_ExecRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_ExecResponse> {
+    public func `exec`(request: Worker_V1_ExecRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_ExecResponse> {
         return await self.client.unary(path: "/worker.v1.WorkerService/Exec", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `spawn`(request: Worker_V1_SpawnRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Worker_V1_SpawnResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/worker.v1.WorkerService/Spawn", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `spawn`(request: Worker_V1_SpawnRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_SpawnResponse> {
+    public func `spawn`(request: Worker_V1_SpawnRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_SpawnResponse> {
         return await self.client.unary(path: "/worker.v1.WorkerService/Spawn", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `readFile`(request: Worker_V1_ReadFileRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Worker_V1_ReadFileResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/worker.v1.WorkerService/ReadFile", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `readFile`(request: Worker_V1_ReadFileRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_ReadFileResponse> {
+    public func `readFile`(request: Worker_V1_ReadFileRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_ReadFileResponse> {
         return await self.client.unary(path: "/worker.v1.WorkerService/ReadFile", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `writeFile`(request: Worker_V1_WriteFileRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Worker_V1_WriteFileResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/worker.v1.WorkerService/WriteFile", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `writeFile`(request: Worker_V1_WriteFileRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_WriteFileResponse> {
+    public func `writeFile`(request: Worker_V1_WriteFileRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_WriteFileResponse> {
         return await self.client.unary(path: "/worker.v1.WorkerService/WriteFile", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `stat`(request: Worker_V1_StatRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Worker_V1_StatResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/worker.v1.WorkerService/Stat", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `stat`(request: Worker_V1_StatRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_StatResponse> {
+    public func `stat`(request: Worker_V1_StatRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_StatResponse> {
         return await self.client.unary(path: "/worker.v1.WorkerService/Stat", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `installPackages`(request: Worker_V1_InstallPackagesRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Worker_V1_InstallPackagesResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/worker.v1.WorkerService/InstallPackages", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `installPackages`(request: Worker_V1_InstallPackagesRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_InstallPackagesResponse> {
+    public func `installPackages`(request: Worker_V1_InstallPackagesRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_InstallPackagesResponse> {
         return await self.client.unary(path: "/worker.v1.WorkerService/InstallPackages", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Worker_V1_HealthResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/worker.v1.WorkerService/Health", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_HealthResponse> {
+    public func `health`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Worker_V1_HealthResponse> {
         return await self.client.unary(path: "/worker.v1.WorkerService/Health", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
-    internal enum Metadata {
-        internal enum Methods {
-            internal static let exec = Connect.MethodSpec(name: "Exec", service: "worker.v1.WorkerService", type: .unary)
-            internal static let spawn = Connect.MethodSpec(name: "Spawn", service: "worker.v1.WorkerService", type: .unary)
-            internal static let readFile = Connect.MethodSpec(name: "ReadFile", service: "worker.v1.WorkerService", type: .unary)
-            internal static let writeFile = Connect.MethodSpec(name: "WriteFile", service: "worker.v1.WorkerService", type: .unary)
-            internal static let stat = Connect.MethodSpec(name: "Stat", service: "worker.v1.WorkerService", type: .unary)
-            internal static let installPackages = Connect.MethodSpec(name: "InstallPackages", service: "worker.v1.WorkerService", type: .unary)
-            internal static let health = Connect.MethodSpec(name: "Health", service: "worker.v1.WorkerService", type: .unary)
+    public enum Metadata {
+        public enum Methods {
+            public static let exec = Connect.MethodSpec(name: "Exec", service: "worker.v1.WorkerService", type: .unary)
+            public static let spawn = Connect.MethodSpec(name: "Spawn", service: "worker.v1.WorkerService", type: .unary)
+            public static let readFile = Connect.MethodSpec(name: "ReadFile", service: "worker.v1.WorkerService", type: .unary)
+            public static let writeFile = Connect.MethodSpec(name: "WriteFile", service: "worker.v1.WorkerService", type: .unary)
+            public static let stat = Connect.MethodSpec(name: "Stat", service: "worker.v1.WorkerService", type: .unary)
+            public static let installPackages = Connect.MethodSpec(name: "InstallPackages", service: "worker.v1.WorkerService", type: .unary)
+            public static let health = Connect.MethodSpec(name: "Health", service: "worker.v1.WorkerService", type: .unary)
         }
     }
 }

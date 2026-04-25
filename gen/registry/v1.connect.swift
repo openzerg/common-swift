@@ -9,226 +9,410 @@ import Connect
 import Foundation
 import SwiftProtobuf
 
-internal protocol Registry_V1_RegistryServiceClientInterface: Sendable {
+public protocol Registry_V1_RegistryServiceClientInterface: Sendable {
+
+    @discardableResult
+    func `login`(request: Registry_V1_LoginRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_LoginResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `login`(request: Registry_V1_LoginRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_LoginResponse>
 
+    @discardableResult
+    func `register`(request: Registry_V1_RegisterRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_RegisterResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `register`(request: Registry_V1_RegisterRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_RegisterResponse>
+
+    @discardableResult
+    func `heartbeat`(request: Registry_V1_HeartbeatRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_HeartbeatResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `heartbeat`(request: Registry_V1_HeartbeatRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_HeartbeatResponse>
 
+    @discardableResult
+    func `listInstances`(request: Registry_V1_ListInstancesRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_ListInstancesResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `listInstances`(request: Registry_V1_ListInstancesRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_ListInstancesResponse>
+
+    @discardableResult
+    func `listTemplates`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_ListTemplatesResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `listTemplates`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_ListTemplatesResponse>
 
+    @discardableResult
+    func `getTemplate`(request: Registry_V1_GetTemplateRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_TemplateInfo>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `getTemplate`(request: Registry_V1_GetTemplateRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_TemplateInfo>
+
+    @discardableResult
+    func `createTemplate`(request: Registry_V1_CreateTemplateRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_TemplateInfo>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `createTemplate`(request: Registry_V1_CreateTemplateRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_TemplateInfo>
 
+    @discardableResult
+    func `updateTemplate`(request: Registry_V1_UpdateTemplateRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_TemplateInfo>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `updateTemplate`(request: Registry_V1_UpdateTemplateRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_TemplateInfo>
+
+    @discardableResult
+    func `deleteTemplate`(request: Registry_V1_DeleteTemplateRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_DeleteTemplateResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `deleteTemplate`(request: Registry_V1_DeleteTemplateRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_DeleteTemplateResponse>
 
+    @discardableResult
+    func `listSessions`(request: Registry_V1_ListSessionsRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_ListSessionsResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `listSessions`(request: Registry_V1_ListSessionsRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_ListSessionsResponse>
+
+    @discardableResult
+    func `getSession`(request: Registry_V1_GetSessionRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_SessionInfo>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `getSession`(request: Registry_V1_GetSessionRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_SessionInfo>
 
+    @discardableResult
+    func `createSession`(request: Registry_V1_CreateSessionRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_CreateSessionResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `createSession`(request: Registry_V1_CreateSessionRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_CreateSessionResponse>
+
+    @discardableResult
+    func `updateSessionMeta`(request: Registry_V1_UpdateSessionMetaRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_SessionInfo>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `updateSessionMeta`(request: Registry_V1_UpdateSessionMetaRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_SessionInfo>
 
+    @discardableResult
+    func `updateSessionHotConfig`(request: Registry_V1_UpdateSessionHotConfigRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_SessionInfo>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `updateSessionHotConfig`(request: Registry_V1_UpdateSessionHotConfigRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_SessionInfo>
+
+    @discardableResult
+    func `updateSessionColdConfig`(request: Registry_V1_UpdateSessionColdConfigRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_SessionInfo>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `updateSessionColdConfig`(request: Registry_V1_UpdateSessionColdConfigRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_SessionInfo>
 
+    @discardableResult
+    func `switchSessionTemplate`(request: Registry_V1_SwitchSessionTemplateRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_SessionInfo>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `switchSessionTemplate`(request: Registry_V1_SwitchSessionTemplateRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_SessionInfo>
+
+    @discardableResult
+    func `deleteSession`(request: Registry_V1_DeleteSessionRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_DeleteSessionResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `deleteSession`(request: Registry_V1_DeleteSessionRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_DeleteSessionResponse>
 
+    @discardableResult
+    func `startSession`(request: Registry_V1_StartSessionRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_StartSessionResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `startSession`(request: Registry_V1_StartSessionRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_StartSessionResponse>
+
+    @discardableResult
+    func `stopSession`(request: Registry_V1_StopSessionRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_StopSessionResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `stopSession`(request: Registry_V1_StopSessionRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_StopSessionResponse>
 
+    @discardableResult
+    func `resolveSession`(request: Registry_V1_ResolveSessionRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_ResolveSessionResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `resolveSession`(request: Registry_V1_ResolveSessionRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_ResolveSessionResponse>
+
+    @discardableResult
+    func `listMessages`(request: Registry_V1_ListMessagesRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_ListMessagesResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `listMessages`(request: Registry_V1_ListMessagesRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_ListMessagesResponse>
 
+    @discardableResult
+    func `createMessage`(request: Registry_V1_CreateMessageRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_CreateMessageResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `createMessage`(request: Registry_V1_CreateMessageRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_CreateMessageResponse>
+
+    @discardableResult
+    func `deleteMessagesFrom`(request: Registry_V1_DeleteMessagesFromRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<Registry_V1_DeleteMessagesFromResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `deleteMessagesFrom`(request: Registry_V1_DeleteMessagesFromRequest, headers: Connect.Headers) async -> ResponseMessage<Registry_V1_DeleteMessagesFromResponse>
 }
 
 /// Concrete implementation of `Registry_V1_RegistryServiceClientInterface`.
-internal final class Registry_V1_RegistryServiceClient: Registry_V1_RegistryServiceClientInterface, Sendable {
+public final class Registry_V1_RegistryServiceClient: Registry_V1_RegistryServiceClientInterface, Sendable {
     private let client: Connect.ProtocolClientInterface
 
-    internal init(client: Connect.ProtocolClientInterface) {
+    public init(client: Connect.ProtocolClientInterface) {
         self.client = client
     }
 
+    @discardableResult
+    public func `login`(request: Registry_V1_LoginRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_LoginResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/Login", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `login`(request: Registry_V1_LoginRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_LoginResponse> {
+    public func `login`(request: Registry_V1_LoginRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_LoginResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/Login", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `register`(request: Registry_V1_RegisterRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_RegisterResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/Register", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `register`(request: Registry_V1_RegisterRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_RegisterResponse> {
+    public func `register`(request: Registry_V1_RegisterRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_RegisterResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/Register", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `heartbeat`(request: Registry_V1_HeartbeatRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_HeartbeatResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/Heartbeat", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `heartbeat`(request: Registry_V1_HeartbeatRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_HeartbeatResponse> {
+    public func `heartbeat`(request: Registry_V1_HeartbeatRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_HeartbeatResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/Heartbeat", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `listInstances`(request: Registry_V1_ListInstancesRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_ListInstancesResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/ListInstances", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `listInstances`(request: Registry_V1_ListInstancesRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_ListInstancesResponse> {
+    public func `listInstances`(request: Registry_V1_ListInstancesRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_ListInstancesResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/ListInstances", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `listTemplates`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_ListTemplatesResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/ListTemplates", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `listTemplates`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_ListTemplatesResponse> {
+    public func `listTemplates`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_ListTemplatesResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/ListTemplates", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `getTemplate`(request: Registry_V1_GetTemplateRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_TemplateInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/GetTemplate", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `getTemplate`(request: Registry_V1_GetTemplateRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_TemplateInfo> {
+    public func `getTemplate`(request: Registry_V1_GetTemplateRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_TemplateInfo> {
         return await self.client.unary(path: "/registry.v1.RegistryService/GetTemplate", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `createTemplate`(request: Registry_V1_CreateTemplateRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_TemplateInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/CreateTemplate", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `createTemplate`(request: Registry_V1_CreateTemplateRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_TemplateInfo> {
+    public func `createTemplate`(request: Registry_V1_CreateTemplateRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_TemplateInfo> {
         return await self.client.unary(path: "/registry.v1.RegistryService/CreateTemplate", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `updateTemplate`(request: Registry_V1_UpdateTemplateRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_TemplateInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/UpdateTemplate", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `updateTemplate`(request: Registry_V1_UpdateTemplateRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_TemplateInfo> {
+    public func `updateTemplate`(request: Registry_V1_UpdateTemplateRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_TemplateInfo> {
         return await self.client.unary(path: "/registry.v1.RegistryService/UpdateTemplate", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `deleteTemplate`(request: Registry_V1_DeleteTemplateRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_DeleteTemplateResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/DeleteTemplate", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `deleteTemplate`(request: Registry_V1_DeleteTemplateRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_DeleteTemplateResponse> {
+    public func `deleteTemplate`(request: Registry_V1_DeleteTemplateRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_DeleteTemplateResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/DeleteTemplate", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `listSessions`(request: Registry_V1_ListSessionsRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_ListSessionsResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/ListSessions", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `listSessions`(request: Registry_V1_ListSessionsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_ListSessionsResponse> {
+    public func `listSessions`(request: Registry_V1_ListSessionsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_ListSessionsResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/ListSessions", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `getSession`(request: Registry_V1_GetSessionRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_SessionInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/GetSession", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `getSession`(request: Registry_V1_GetSessionRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_SessionInfo> {
+    public func `getSession`(request: Registry_V1_GetSessionRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_SessionInfo> {
         return await self.client.unary(path: "/registry.v1.RegistryService/GetSession", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `createSession`(request: Registry_V1_CreateSessionRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_CreateSessionResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/CreateSession", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `createSession`(request: Registry_V1_CreateSessionRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_CreateSessionResponse> {
+    public func `createSession`(request: Registry_V1_CreateSessionRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_CreateSessionResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/CreateSession", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `updateSessionMeta`(request: Registry_V1_UpdateSessionMetaRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_SessionInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/UpdateSessionMeta", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `updateSessionMeta`(request: Registry_V1_UpdateSessionMetaRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_SessionInfo> {
+    public func `updateSessionMeta`(request: Registry_V1_UpdateSessionMetaRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_SessionInfo> {
         return await self.client.unary(path: "/registry.v1.RegistryService/UpdateSessionMeta", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `updateSessionHotConfig`(request: Registry_V1_UpdateSessionHotConfigRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_SessionInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/UpdateSessionHotConfig", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `updateSessionHotConfig`(request: Registry_V1_UpdateSessionHotConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_SessionInfo> {
+    public func `updateSessionHotConfig`(request: Registry_V1_UpdateSessionHotConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_SessionInfo> {
         return await self.client.unary(path: "/registry.v1.RegistryService/UpdateSessionHotConfig", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `updateSessionColdConfig`(request: Registry_V1_UpdateSessionColdConfigRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_SessionInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/UpdateSessionColdConfig", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `updateSessionColdConfig`(request: Registry_V1_UpdateSessionColdConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_SessionInfo> {
+    public func `updateSessionColdConfig`(request: Registry_V1_UpdateSessionColdConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_SessionInfo> {
         return await self.client.unary(path: "/registry.v1.RegistryService/UpdateSessionColdConfig", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `switchSessionTemplate`(request: Registry_V1_SwitchSessionTemplateRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_SessionInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/SwitchSessionTemplate", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `switchSessionTemplate`(request: Registry_V1_SwitchSessionTemplateRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_SessionInfo> {
+    public func `switchSessionTemplate`(request: Registry_V1_SwitchSessionTemplateRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_SessionInfo> {
         return await self.client.unary(path: "/registry.v1.RegistryService/SwitchSessionTemplate", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `deleteSession`(request: Registry_V1_DeleteSessionRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_DeleteSessionResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/DeleteSession", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `deleteSession`(request: Registry_V1_DeleteSessionRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_DeleteSessionResponse> {
+    public func `deleteSession`(request: Registry_V1_DeleteSessionRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_DeleteSessionResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/DeleteSession", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `startSession`(request: Registry_V1_StartSessionRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_StartSessionResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/StartSession", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `startSession`(request: Registry_V1_StartSessionRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_StartSessionResponse> {
+    public func `startSession`(request: Registry_V1_StartSessionRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_StartSessionResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/StartSession", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `stopSession`(request: Registry_V1_StopSessionRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_StopSessionResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/StopSession", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `stopSession`(request: Registry_V1_StopSessionRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_StopSessionResponse> {
+    public func `stopSession`(request: Registry_V1_StopSessionRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_StopSessionResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/StopSession", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `resolveSession`(request: Registry_V1_ResolveSessionRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_ResolveSessionResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/ResolveSession", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `resolveSession`(request: Registry_V1_ResolveSessionRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_ResolveSessionResponse> {
+    public func `resolveSession`(request: Registry_V1_ResolveSessionRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_ResolveSessionResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/ResolveSession", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `listMessages`(request: Registry_V1_ListMessagesRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_ListMessagesResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/ListMessages", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `listMessages`(request: Registry_V1_ListMessagesRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_ListMessagesResponse> {
+    public func `listMessages`(request: Registry_V1_ListMessagesRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_ListMessagesResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/ListMessages", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `createMessage`(request: Registry_V1_CreateMessageRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_CreateMessageResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/CreateMessage", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `createMessage`(request: Registry_V1_CreateMessageRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_CreateMessageResponse> {
+    public func `createMessage`(request: Registry_V1_CreateMessageRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_CreateMessageResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/CreateMessage", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `deleteMessagesFrom`(request: Registry_V1_DeleteMessagesFromRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<Registry_V1_DeleteMessagesFromResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/registry.v1.RegistryService/DeleteMessagesFrom", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `deleteMessagesFrom`(request: Registry_V1_DeleteMessagesFromRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_DeleteMessagesFromResponse> {
+    public func `deleteMessagesFrom`(request: Registry_V1_DeleteMessagesFromRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Registry_V1_DeleteMessagesFromResponse> {
         return await self.client.unary(path: "/registry.v1.RegistryService/DeleteMessagesFrom", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
-    internal enum Metadata {
-        internal enum Methods {
-            internal static let login = Connect.MethodSpec(name: "Login", service: "registry.v1.RegistryService", type: .unary)
-            internal static let register = Connect.MethodSpec(name: "Register", service: "registry.v1.RegistryService", type: .unary)
-            internal static let heartbeat = Connect.MethodSpec(name: "Heartbeat", service: "registry.v1.RegistryService", type: .unary)
-            internal static let listInstances = Connect.MethodSpec(name: "ListInstances", service: "registry.v1.RegistryService", type: .unary)
-            internal static let listTemplates = Connect.MethodSpec(name: "ListTemplates", service: "registry.v1.RegistryService", type: .unary)
-            internal static let getTemplate = Connect.MethodSpec(name: "GetTemplate", service: "registry.v1.RegistryService", type: .unary)
-            internal static let createTemplate = Connect.MethodSpec(name: "CreateTemplate", service: "registry.v1.RegistryService", type: .unary)
-            internal static let updateTemplate = Connect.MethodSpec(name: "UpdateTemplate", service: "registry.v1.RegistryService", type: .unary)
-            internal static let deleteTemplate = Connect.MethodSpec(name: "DeleteTemplate", service: "registry.v1.RegistryService", type: .unary)
-            internal static let listSessions = Connect.MethodSpec(name: "ListSessions", service: "registry.v1.RegistryService", type: .unary)
-            internal static let getSession = Connect.MethodSpec(name: "GetSession", service: "registry.v1.RegistryService", type: .unary)
-            internal static let createSession = Connect.MethodSpec(name: "CreateSession", service: "registry.v1.RegistryService", type: .unary)
-            internal static let updateSessionMeta = Connect.MethodSpec(name: "UpdateSessionMeta", service: "registry.v1.RegistryService", type: .unary)
-            internal static let updateSessionHotConfig = Connect.MethodSpec(name: "UpdateSessionHotConfig", service: "registry.v1.RegistryService", type: .unary)
-            internal static let updateSessionColdConfig = Connect.MethodSpec(name: "UpdateSessionColdConfig", service: "registry.v1.RegistryService", type: .unary)
-            internal static let switchSessionTemplate = Connect.MethodSpec(name: "SwitchSessionTemplate", service: "registry.v1.RegistryService", type: .unary)
-            internal static let deleteSession = Connect.MethodSpec(name: "DeleteSession", service: "registry.v1.RegistryService", type: .unary)
-            internal static let startSession = Connect.MethodSpec(name: "StartSession", service: "registry.v1.RegistryService", type: .unary)
-            internal static let stopSession = Connect.MethodSpec(name: "StopSession", service: "registry.v1.RegistryService", type: .unary)
-            internal static let resolveSession = Connect.MethodSpec(name: "ResolveSession", service: "registry.v1.RegistryService", type: .unary)
-            internal static let listMessages = Connect.MethodSpec(name: "ListMessages", service: "registry.v1.RegistryService", type: .unary)
-            internal static let createMessage = Connect.MethodSpec(name: "CreateMessage", service: "registry.v1.RegistryService", type: .unary)
-            internal static let deleteMessagesFrom = Connect.MethodSpec(name: "DeleteMessagesFrom", service: "registry.v1.RegistryService", type: .unary)
+    public enum Metadata {
+        public enum Methods {
+            public static let login = Connect.MethodSpec(name: "Login", service: "registry.v1.RegistryService", type: .unary)
+            public static let register = Connect.MethodSpec(name: "Register", service: "registry.v1.RegistryService", type: .unary)
+            public static let heartbeat = Connect.MethodSpec(name: "Heartbeat", service: "registry.v1.RegistryService", type: .unary)
+            public static let listInstances = Connect.MethodSpec(name: "ListInstances", service: "registry.v1.RegistryService", type: .unary)
+            public static let listTemplates = Connect.MethodSpec(name: "ListTemplates", service: "registry.v1.RegistryService", type: .unary)
+            public static let getTemplate = Connect.MethodSpec(name: "GetTemplate", service: "registry.v1.RegistryService", type: .unary)
+            public static let createTemplate = Connect.MethodSpec(name: "CreateTemplate", service: "registry.v1.RegistryService", type: .unary)
+            public static let updateTemplate = Connect.MethodSpec(name: "UpdateTemplate", service: "registry.v1.RegistryService", type: .unary)
+            public static let deleteTemplate = Connect.MethodSpec(name: "DeleteTemplate", service: "registry.v1.RegistryService", type: .unary)
+            public static let listSessions = Connect.MethodSpec(name: "ListSessions", service: "registry.v1.RegistryService", type: .unary)
+            public static let getSession = Connect.MethodSpec(name: "GetSession", service: "registry.v1.RegistryService", type: .unary)
+            public static let createSession = Connect.MethodSpec(name: "CreateSession", service: "registry.v1.RegistryService", type: .unary)
+            public static let updateSessionMeta = Connect.MethodSpec(name: "UpdateSessionMeta", service: "registry.v1.RegistryService", type: .unary)
+            public static let updateSessionHotConfig = Connect.MethodSpec(name: "UpdateSessionHotConfig", service: "registry.v1.RegistryService", type: .unary)
+            public static let updateSessionColdConfig = Connect.MethodSpec(name: "UpdateSessionColdConfig", service: "registry.v1.RegistryService", type: .unary)
+            public static let switchSessionTemplate = Connect.MethodSpec(name: "SwitchSessionTemplate", service: "registry.v1.RegistryService", type: .unary)
+            public static let deleteSession = Connect.MethodSpec(name: "DeleteSession", service: "registry.v1.RegistryService", type: .unary)
+            public static let startSession = Connect.MethodSpec(name: "StartSession", service: "registry.v1.RegistryService", type: .unary)
+            public static let stopSession = Connect.MethodSpec(name: "StopSession", service: "registry.v1.RegistryService", type: .unary)
+            public static let resolveSession = Connect.MethodSpec(name: "ResolveSession", service: "registry.v1.RegistryService", type: .unary)
+            public static let listMessages = Connect.MethodSpec(name: "ListMessages", service: "registry.v1.RegistryService", type: .unary)
+            public static let createMessage = Connect.MethodSpec(name: "CreateMessage", service: "registry.v1.RegistryService", type: .unary)
+            public static let deleteMessagesFrom = Connect.MethodSpec(name: "DeleteMessagesFrom", service: "registry.v1.RegistryService", type: .unary)
         }
     }
 }

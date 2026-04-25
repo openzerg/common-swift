@@ -25,86 +25,86 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Tools_V1_ListToolsRequest: Sendable {
+public struct Tools_V1_ListToolsRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tools_V1_ToolDefinition: Sendable {
+public struct Tools_V1_ToolDefinition: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var name: String = String()
+  public var name: String = String()
 
-  var description_p: String = String()
+  public var description_p: String = String()
 
-  var inputSchemaJson: String = String()
+  public var inputSchemaJson: String = String()
 
-  var outputSchemaJson: String = String()
+  public var outputSchemaJson: String = String()
 
-  var group: String = String()
+  public var group: String = String()
 
-  var priority: Int32 = 0
+  public var priority: Int32 = 0
 
-  var dependencies: [String] = []
+  public var dependencies: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tools_V1_ListToolsResponse: Sendable {
+public struct Tools_V1_ListToolsResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var tools: [Tools_V1_ToolDefinition] = []
+  public var tools: [Tools_V1_ToolDefinition] = []
 
-  var systemContext: String = String()
+  public var systemContext: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tools_V1_ExecuteToolRequest: Sendable {
+public struct Tools_V1_ExecuteToolRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var toolName: String = String()
+  public var toolName: String = String()
 
-  var argsJson: String = String()
+  public var argsJson: String = String()
 
-  var sessionToken: String = String()
+  public var sessionToken: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tools_V1_ExecuteToolResponse: Sendable {
+public struct Tools_V1_ExecuteToolResponse: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var resultJson: String = String()
+  public var resultJson: String = String()
 
-  var success: Bool = false
+  public var success: Bool = false
 
-  var error: String = String()
+  public var error: String = String()
 
-  var metadata: Dictionary<String,String> = [:]
+  public var metadata: Dictionary<String,String> = [:]
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -112,29 +112,29 @@ struct Tools_V1_ExecuteToolResponse: Sendable {
 fileprivate let _protobuf_package = "tools.v1"
 
 extension Tools_V1_ListToolsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListToolsRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".ListToolsRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     // Load everything into unknown fields
     while try decoder.nextFieldNumber() != nil {}
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tools_V1_ListToolsRequest, rhs: Tools_V1_ListToolsRequest) -> Bool {
+  public static func ==(lhs: Tools_V1_ListToolsRequest, rhs: Tools_V1_ListToolsRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Tools_V1_ToolDefinition: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ToolDefinition"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}name\0\u{1}description\0\u{1}inputSchemaJson\0\u{1}outputSchemaJson\0\u{1}group\0\u{1}priority\0\u{1}dependencies\0")
+  public static let protoMessageName: String = _protobuf_package + ".ToolDefinition"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}name\0\u{1}description\0\u{1}inputSchemaJson\0\u{1}outputSchemaJson\0\u{1}group\0\u{1}priority\0\u{1}dependencies\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -152,7 +152,7 @@ extension Tools_V1_ToolDefinition: SwiftProtobuf.Message, SwiftProtobuf._Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.name.isEmpty {
       try visitor.visitSingularStringField(value: self.name, fieldNumber: 1)
     }
@@ -177,7 +177,7 @@ extension Tools_V1_ToolDefinition: SwiftProtobuf.Message, SwiftProtobuf._Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tools_V1_ToolDefinition, rhs: Tools_V1_ToolDefinition) -> Bool {
+  public static func ==(lhs: Tools_V1_ToolDefinition, rhs: Tools_V1_ToolDefinition) -> Bool {
     if lhs.name != rhs.name {return false}
     if lhs.description_p != rhs.description_p {return false}
     if lhs.inputSchemaJson != rhs.inputSchemaJson {return false}
@@ -191,10 +191,10 @@ extension Tools_V1_ToolDefinition: SwiftProtobuf.Message, SwiftProtobuf._Message
 }
 
 extension Tools_V1_ListToolsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListToolsResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}tools\0\u{1}systemContext\0")
+  public static let protoMessageName: String = _protobuf_package + ".ListToolsResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}tools\0\u{1}systemContext\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -207,7 +207,7 @@ extension Tools_V1_ListToolsResponse: SwiftProtobuf.Message, SwiftProtobuf._Mess
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.tools.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.tools, fieldNumber: 1)
     }
@@ -217,7 +217,7 @@ extension Tools_V1_ListToolsResponse: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tools_V1_ListToolsResponse, rhs: Tools_V1_ListToolsResponse) -> Bool {
+  public static func ==(lhs: Tools_V1_ListToolsResponse, rhs: Tools_V1_ListToolsResponse) -> Bool {
     if lhs.tools != rhs.tools {return false}
     if lhs.systemContext != rhs.systemContext {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -226,10 +226,10 @@ extension Tools_V1_ListToolsResponse: SwiftProtobuf.Message, SwiftProtobuf._Mess
 }
 
 extension Tools_V1_ExecuteToolRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ExecuteToolRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}toolName\0\u{1}argsJson\0\u{1}sessionToken\0")
+  public static let protoMessageName: String = _protobuf_package + ".ExecuteToolRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}toolName\0\u{1}argsJson\0\u{1}sessionToken\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -243,7 +243,7 @@ extension Tools_V1_ExecuteToolRequest: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.toolName.isEmpty {
       try visitor.visitSingularStringField(value: self.toolName, fieldNumber: 1)
     }
@@ -256,7 +256,7 @@ extension Tools_V1_ExecuteToolRequest: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tools_V1_ExecuteToolRequest, rhs: Tools_V1_ExecuteToolRequest) -> Bool {
+  public static func ==(lhs: Tools_V1_ExecuteToolRequest, rhs: Tools_V1_ExecuteToolRequest) -> Bool {
     if lhs.toolName != rhs.toolName {return false}
     if lhs.argsJson != rhs.argsJson {return false}
     if lhs.sessionToken != rhs.sessionToken {return false}
@@ -266,10 +266,10 @@ extension Tools_V1_ExecuteToolRequest: SwiftProtobuf.Message, SwiftProtobuf._Mes
 }
 
 extension Tools_V1_ExecuteToolResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ExecuteToolResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}resultJson\0\u{1}success\0\u{1}error\0\u{1}metadata\0")
+  public static let protoMessageName: String = _protobuf_package + ".ExecuteToolResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}resultJson\0\u{1}success\0\u{1}error\0\u{1}metadata\0")
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -284,7 +284,7 @@ extension Tools_V1_ExecuteToolResponse: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.resultJson.isEmpty {
       try visitor.visitSingularStringField(value: self.resultJson, fieldNumber: 1)
     }
@@ -300,7 +300,7 @@ extension Tools_V1_ExecuteToolResponse: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tools_V1_ExecuteToolResponse, rhs: Tools_V1_ExecuteToolResponse) -> Bool {
+  public static func ==(lhs: Tools_V1_ExecuteToolResponse, rhs: Tools_V1_ExecuteToolResponse) -> Bool {
     if lhs.resultJson != rhs.resultJson {return false}
     if lhs.success != rhs.success {return false}
     if lhs.error != rhs.error {return false}

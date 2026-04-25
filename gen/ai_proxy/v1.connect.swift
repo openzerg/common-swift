@@ -9,163 +9,291 @@ import Connect
 import Foundation
 import SwiftProtobuf
 
-internal protocol AiProxy_V1_AiProxyServiceClientInterface: Sendable {
+public protocol AiProxy_V1_AiProxyServiceClientInterface: Sendable {
+
+    @discardableResult
+    func `listProxies`(request: AiProxy_V1_ListProxiesRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ListProxiesResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `listProxies`(request: AiProxy_V1_ListProxiesRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_ListProxiesResponse>
 
+    @discardableResult
+    func `getProxy`(request: AiProxy_V1_GetProxyRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ProxyInfo>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `getProxy`(request: AiProxy_V1_GetProxyRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_ProxyInfo>
+
+    @discardableResult
+    func `createProxy`(request: AiProxy_V1_CreateProxyRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ProxyInfo>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `createProxy`(request: AiProxy_V1_CreateProxyRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_ProxyInfo>
 
+    @discardableResult
+    func `updateProxy`(request: AiProxy_V1_UpdateProxyRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ProxyInfo>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `updateProxy`(request: AiProxy_V1_UpdateProxyRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_ProxyInfo>
+
+    @discardableResult
+    func `deleteProxy`(request: AiProxy_V1_DeleteProxyRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_DeleteProxyResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `deleteProxy`(request: AiProxy_V1_DeleteProxyRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_DeleteProxyResponse>
 
+    @discardableResult
+    func `listProviderModelConfigs`(request: AiProxy_V1_ListProviderModelConfigsRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ListProviderModelConfigsResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `listProviderModelConfigs`(request: AiProxy_V1_ListProviderModelConfigsRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_ListProviderModelConfigsResponse>
+
+    @discardableResult
+    func `getProviderModelConfig`(request: AiProxy_V1_GetProviderModelConfigRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ProviderModelConfigInfo>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `getProviderModelConfig`(request: AiProxy_V1_GetProviderModelConfigRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_ProviderModelConfigInfo>
 
+    @discardableResult
+    func `createProviderModelConfig`(request: AiProxy_V1_CreateProviderModelConfigRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ProviderModelConfigInfo>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `createProviderModelConfig`(request: AiProxy_V1_CreateProviderModelConfigRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_ProviderModelConfigInfo>
+
+    @discardableResult
+    func `updateProviderModelConfig`(request: AiProxy_V1_UpdateProviderModelConfigRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ProviderModelConfigInfo>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `updateProviderModelConfig`(request: AiProxy_V1_UpdateProviderModelConfigRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_ProviderModelConfigInfo>
 
+    @discardableResult
+    func `deleteProviderModelConfig`(request: AiProxy_V1_DeleteProviderModelConfigRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_DeleteProviderModelConfigResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `deleteProviderModelConfig`(request: AiProxy_V1_DeleteProviderModelConfigRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_DeleteProviderModelConfigResponse>
+
+    @discardableResult
+    func `listProviders`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ListProvidersResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `listProviders`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_ListProvidersResponse>
 
+    @discardableResult
+    func `listProviderModels`(request: AiProxy_V1_ListProviderModelsRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ListProviderModelsResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `listProviderModels`(request: AiProxy_V1_ListProviderModelsRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_ListProviderModelsResponse>
+
+    @discardableResult
+    func `testProviderModelConfig`(request: AiProxy_V1_TestProviderModelConfigRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_TestProviderModelConfigResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `testProviderModelConfig`(request: AiProxy_V1_TestProviderModelConfigRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_TestProviderModelConfigResponse>
 
+    @discardableResult
+    func `testProxy`(request: AiProxy_V1_TestProxyRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_TestProxyResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `testProxy`(request: AiProxy_V1_TestProxyRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_TestProxyResponse>
 
+    @discardableResult
+    func `queryLogs`(request: AiProxy_V1_QueryLogsRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_QueryLogsResponse>) -> Void) -> Connect.Cancelable
+
     @available(iOS 13, *)
     func `queryLogs`(request: AiProxy_V1_QueryLogsRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_QueryLogsResponse>
+
+    @discardableResult
+    func `getTokenStats`(request: AiProxy_V1_GetTokenStatsRequest, headers: Connect.Headers, completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_TokenStatsResponse>) -> Void) -> Connect.Cancelable
 
     @available(iOS 13, *)
     func `getTokenStats`(request: AiProxy_V1_GetTokenStatsRequest, headers: Connect.Headers) async -> ResponseMessage<AiProxy_V1_TokenStatsResponse>
 }
 
 /// Concrete implementation of `AiProxy_V1_AiProxyServiceClientInterface`.
-internal final class AiProxy_V1_AiProxyServiceClient: AiProxy_V1_AiProxyServiceClientInterface, Sendable {
+public final class AiProxy_V1_AiProxyServiceClient: AiProxy_V1_AiProxyServiceClientInterface, Sendable {
     private let client: Connect.ProtocolClientInterface
 
-    internal init(client: Connect.ProtocolClientInterface) {
+    public init(client: Connect.ProtocolClientInterface) {
         self.client = client
     }
 
+    @discardableResult
+    public func `listProxies`(request: AiProxy_V1_ListProxiesRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ListProxiesResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/ListProxies", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `listProxies`(request: AiProxy_V1_ListProxiesRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ListProxiesResponse> {
+    public func `listProxies`(request: AiProxy_V1_ListProxiesRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ListProxiesResponse> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/ListProxies", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `getProxy`(request: AiProxy_V1_GetProxyRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ProxyInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/GetProxy", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `getProxy`(request: AiProxy_V1_GetProxyRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ProxyInfo> {
+    public func `getProxy`(request: AiProxy_V1_GetProxyRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ProxyInfo> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/GetProxy", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `createProxy`(request: AiProxy_V1_CreateProxyRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ProxyInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/CreateProxy", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `createProxy`(request: AiProxy_V1_CreateProxyRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ProxyInfo> {
+    public func `createProxy`(request: AiProxy_V1_CreateProxyRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ProxyInfo> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/CreateProxy", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `updateProxy`(request: AiProxy_V1_UpdateProxyRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ProxyInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/UpdateProxy", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `updateProxy`(request: AiProxy_V1_UpdateProxyRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ProxyInfo> {
+    public func `updateProxy`(request: AiProxy_V1_UpdateProxyRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ProxyInfo> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/UpdateProxy", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `deleteProxy`(request: AiProxy_V1_DeleteProxyRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_DeleteProxyResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/DeleteProxy", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `deleteProxy`(request: AiProxy_V1_DeleteProxyRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_DeleteProxyResponse> {
+    public func `deleteProxy`(request: AiProxy_V1_DeleteProxyRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_DeleteProxyResponse> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/DeleteProxy", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `listProviderModelConfigs`(request: AiProxy_V1_ListProviderModelConfigsRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ListProviderModelConfigsResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/ListProviderModelConfigs", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `listProviderModelConfigs`(request: AiProxy_V1_ListProviderModelConfigsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ListProviderModelConfigsResponse> {
+    public func `listProviderModelConfigs`(request: AiProxy_V1_ListProviderModelConfigsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ListProviderModelConfigsResponse> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/ListProviderModelConfigs", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `getProviderModelConfig`(request: AiProxy_V1_GetProviderModelConfigRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ProviderModelConfigInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/GetProviderModelConfig", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `getProviderModelConfig`(request: AiProxy_V1_GetProviderModelConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ProviderModelConfigInfo> {
+    public func `getProviderModelConfig`(request: AiProxy_V1_GetProviderModelConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ProviderModelConfigInfo> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/GetProviderModelConfig", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `createProviderModelConfig`(request: AiProxy_V1_CreateProviderModelConfigRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ProviderModelConfigInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/CreateProviderModelConfig", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `createProviderModelConfig`(request: AiProxy_V1_CreateProviderModelConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ProviderModelConfigInfo> {
+    public func `createProviderModelConfig`(request: AiProxy_V1_CreateProviderModelConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ProviderModelConfigInfo> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/CreateProviderModelConfig", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `updateProviderModelConfig`(request: AiProxy_V1_UpdateProviderModelConfigRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ProviderModelConfigInfo>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/UpdateProviderModelConfig", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `updateProviderModelConfig`(request: AiProxy_V1_UpdateProviderModelConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ProviderModelConfigInfo> {
+    public func `updateProviderModelConfig`(request: AiProxy_V1_UpdateProviderModelConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ProviderModelConfigInfo> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/UpdateProviderModelConfig", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `deleteProviderModelConfig`(request: AiProxy_V1_DeleteProviderModelConfigRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_DeleteProviderModelConfigResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/DeleteProviderModelConfig", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `deleteProviderModelConfig`(request: AiProxy_V1_DeleteProviderModelConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_DeleteProviderModelConfigResponse> {
+    public func `deleteProviderModelConfig`(request: AiProxy_V1_DeleteProviderModelConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_DeleteProviderModelConfigResponse> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/DeleteProviderModelConfig", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `listProviders`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ListProvidersResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/ListProviders", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `listProviders`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ListProvidersResponse> {
+    public func `listProviders`(request: SwiftProtobuf.Google_Protobuf_Empty, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ListProvidersResponse> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/ListProviders", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `listProviderModels`(request: AiProxy_V1_ListProviderModelsRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_ListProviderModelsResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/ListProviderModels", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `listProviderModels`(request: AiProxy_V1_ListProviderModelsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ListProviderModelsResponse> {
+    public func `listProviderModels`(request: AiProxy_V1_ListProviderModelsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_ListProviderModelsResponse> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/ListProviderModels", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `testProviderModelConfig`(request: AiProxy_V1_TestProviderModelConfigRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_TestProviderModelConfigResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/TestProviderModelConfig", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `testProviderModelConfig`(request: AiProxy_V1_TestProviderModelConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_TestProviderModelConfigResponse> {
+    public func `testProviderModelConfig`(request: AiProxy_V1_TestProviderModelConfigRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_TestProviderModelConfigResponse> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/TestProviderModelConfig", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `testProxy`(request: AiProxy_V1_TestProxyRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_TestProxyResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/TestProxy", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `testProxy`(request: AiProxy_V1_TestProxyRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_TestProxyResponse> {
+    public func `testProxy`(request: AiProxy_V1_TestProxyRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_TestProxyResponse> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/TestProxy", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `queryLogs`(request: AiProxy_V1_QueryLogsRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_QueryLogsResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/QueryLogs", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `queryLogs`(request: AiProxy_V1_QueryLogsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_QueryLogsResponse> {
+    public func `queryLogs`(request: AiProxy_V1_QueryLogsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_QueryLogsResponse> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/QueryLogs", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
+    @discardableResult
+    public func `getTokenStats`(request: AiProxy_V1_GetTokenStatsRequest, headers: Connect.Headers = [:], completion: @escaping @Sendable (ResponseMessage<AiProxy_V1_TokenStatsResponse>) -> Void) -> Connect.Cancelable {
+        return self.client.unary(path: "/ai_proxy.v1.AiProxyService/GetTokenStats", idempotencyLevel: .unknown, request: request, headers: headers, completion: completion)
+    }
+
     @available(iOS 13, *)
-    internal func `getTokenStats`(request: AiProxy_V1_GetTokenStatsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_TokenStatsResponse> {
+    public func `getTokenStats`(request: AiProxy_V1_GetTokenStatsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<AiProxy_V1_TokenStatsResponse> {
         return await self.client.unary(path: "/ai_proxy.v1.AiProxyService/GetTokenStats", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
-    internal enum Metadata {
-        internal enum Methods {
-            internal static let listProxies = Connect.MethodSpec(name: "ListProxies", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let getProxy = Connect.MethodSpec(name: "GetProxy", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let createProxy = Connect.MethodSpec(name: "CreateProxy", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let updateProxy = Connect.MethodSpec(name: "UpdateProxy", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let deleteProxy = Connect.MethodSpec(name: "DeleteProxy", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let listProviderModelConfigs = Connect.MethodSpec(name: "ListProviderModelConfigs", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let getProviderModelConfig = Connect.MethodSpec(name: "GetProviderModelConfig", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let createProviderModelConfig = Connect.MethodSpec(name: "CreateProviderModelConfig", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let updateProviderModelConfig = Connect.MethodSpec(name: "UpdateProviderModelConfig", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let deleteProviderModelConfig = Connect.MethodSpec(name: "DeleteProviderModelConfig", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let listProviders = Connect.MethodSpec(name: "ListProviders", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let listProviderModels = Connect.MethodSpec(name: "ListProviderModels", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let testProviderModelConfig = Connect.MethodSpec(name: "TestProviderModelConfig", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let testProxy = Connect.MethodSpec(name: "TestProxy", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let queryLogs = Connect.MethodSpec(name: "QueryLogs", service: "ai_proxy.v1.AiProxyService", type: .unary)
-            internal static let getTokenStats = Connect.MethodSpec(name: "GetTokenStats", service: "ai_proxy.v1.AiProxyService", type: .unary)
+    public enum Metadata {
+        public enum Methods {
+            public static let listProxies = Connect.MethodSpec(name: "ListProxies", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let getProxy = Connect.MethodSpec(name: "GetProxy", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let createProxy = Connect.MethodSpec(name: "CreateProxy", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let updateProxy = Connect.MethodSpec(name: "UpdateProxy", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let deleteProxy = Connect.MethodSpec(name: "DeleteProxy", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let listProviderModelConfigs = Connect.MethodSpec(name: "ListProviderModelConfigs", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let getProviderModelConfig = Connect.MethodSpec(name: "GetProviderModelConfig", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let createProviderModelConfig = Connect.MethodSpec(name: "CreateProviderModelConfig", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let updateProviderModelConfig = Connect.MethodSpec(name: "UpdateProviderModelConfig", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let deleteProviderModelConfig = Connect.MethodSpec(name: "DeleteProviderModelConfig", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let listProviders = Connect.MethodSpec(name: "ListProviders", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let listProviderModels = Connect.MethodSpec(name: "ListProviderModels", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let testProviderModelConfig = Connect.MethodSpec(name: "TestProviderModelConfig", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let testProxy = Connect.MethodSpec(name: "TestProxy", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let queryLogs = Connect.MethodSpec(name: "QueryLogs", service: "ai_proxy.v1.AiProxyService", type: .unary)
+            public static let getTokenStats = Connect.MethodSpec(name: "GetTokenStats", service: "ai_proxy.v1.AiProxyService", type: .unary)
         }
     }
 }
